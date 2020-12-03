@@ -36,12 +36,12 @@ public class RegisterServlet extends HttpServlet {
 		UserService service = new UserService();
 		
 		//2.1 检查用户名密码是否为空，两密码是否相等
-		if (request.getParameter("userName")==""){
+		if (request.getParameter("userName").equals("")){
 			request.setAttribute("errorMessage", "用户名不能为空！");
 			request.getRequestDispatcher("/register.jsp").forward(request, response);
 			return;
 		}
-		if (request.getParameter("password")==""){
+		if (request.getParameter("password").equals("")){
 			request.setAttribute("user", user);
 			request.setAttribute("errorMessage", "密码不能为空！");
 			request.getRequestDispatcher("/register.jsp").forward(request, response);

@@ -57,8 +57,9 @@ public class UserDao {
 
 		try {
 			//4.执行sql
-			String sql = "insert into users (username,fullname,gender,age,email,password,) values(?,?,?,?,?,?)";
+			String sql = "insert into users (username,fullname,gender,age,email,password) values(?,?,?,?,?,?)";
 			st = cn.prepareStatement(sql);
+//			System.out.println(user.getGender());
 			
 			st.setString(1, user.getUserName());
 			st.setString(2, user.getFullName());
