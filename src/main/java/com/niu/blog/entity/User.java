@@ -1,12 +1,17 @@
 package com.niu.blog.entity;
 
+//用户的信息至少包括，用户的登录名、密码、用户的姓名、性别、出生日期、手机、Email、微信号、描述信息、注册日期等。
 public class User {
     private String userName;
     private String password;
     private String fullName;
-    private String email;
-    private int age;
     private String gender;
+    private String birthday;
+    private String phone;
+    private String email;
+    private String weChatId;
+    private String description;
+    private String registrationDate;
 
     public User() {
     }
@@ -35,6 +40,30 @@ public class User {
         this.fullName = fullName;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -43,19 +72,27 @@ public class User {
         this.email = email;
     }
 
-    public int getAge() {
-        return age;
+    public String getWeChatId() {
+        return weChatId;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setWeChatId(String weChatId) {
+        this.weChatId = weChatId;
     }
 
-    public String getGender() {
-        return gender;
+    public String getDescription() {
+        return description;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getRegistrationDate() {
+        return registrationDate;
+    }
+
+    public void setRegistrationDate(String registrationDate) {
+        this.registrationDate = registrationDate;
     }
 }

@@ -24,13 +24,20 @@ public class RegisterServlet extends HttpServlet {
 		//1. 接收表单数据
 		//使用编码转换过滤器拦截request请求并转换编码，不在servlet中处理了
 		//request.setCharacterEncoding("utf-8");
+
+		//用户的信息至少包括，用户的登录名、密码、用户的姓名、性别、出生日期、手机、Email、微信号、描述信息、注册日期等。
 		User user = new User();
 		user.setUserName(request.getParameter("userName"));
 		user.setPassword(request.getParameter("password"));
 		user.setFullName(request.getParameter("fullName"));
-		user.setAge(Integer.parseInt(request.getParameter("age")));
 		user.setGender(request.getParameter("gender"));
+		user.setBirthday(request.getParameter("birthday"));
+		user.setPhone(request.getParameter("phone"));
 		user.setEmail(request.getParameter("email"));
+		user.setEmail(request.getParameter("email"));
+		user.setWeChatId(request.getParameter("weChatId"));
+		user.setDescription(request.getParameter("description"));
+		user.setRegistrationDate(request.getParameter("registrationDate"));
 		//2. 检查数据
 		
 		UserService service = new UserService();
