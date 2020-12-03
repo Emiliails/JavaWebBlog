@@ -28,6 +28,9 @@ public class RegisterServlet extends HttpServlet {
 		user.setUserName(request.getParameter("userName"));
 		user.setPassword(request.getParameter("password"));
 		user.setFullName(request.getParameter("fullName"));
+		user.setAge(Integer.parseInt(request.getParameter("age")));
+		user.setGender(request.getParameter("gender"));
+		user.setEmail(request.getParameter("email"));
 		//2. 检查数据
 		
 		UserService service = new UserService();

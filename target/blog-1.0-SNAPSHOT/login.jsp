@@ -45,10 +45,7 @@
         <label for="password">密码</label>
         <input type="password" class="form-control" id="password" name="password">
     </div>
-    <%--    <span style="color:red">${errorMessage}</span><br>--%>
-    <div class="alert alert-danger" role="alert">
-        ${errorMessage}
-    </div>
+    <span style="color:red">${errorMessage}</span><br>
     <button type="submit" class="btn btn-primary">登录</button>
     <a href="register">没有账号？点击注册</a>
 </form>

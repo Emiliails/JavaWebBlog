@@ -57,12 +57,15 @@ public class UserDao {
 
 		try {
 			//4.执行sql
-			String sql = "insert into users (username,fullname,password) values(?,?,?)";
+			String sql = "insert into users (username,fullname,gender,age,email,password,) values(?,?,?,?,?,?)";
 			st = cn.prepareStatement(sql);
 			
 			st.setString(1, user.getUserName());
 			st.setString(2, user.getFullName());
-			st.setString(3, user.getPassword());
+			st.setString(3, user.getGender());
+			st.setInt(4,user.getAge());
+			st.setString(5, user.getEmail());
+			st.setString(6, user.getPassword());
 			
 			int ret = st.executeUpdate();
 			
