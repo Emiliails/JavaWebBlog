@@ -1,2 +1,3 @@
 # JavaWebBlog
-JavaWeb的博客系统
+JavaWeb的博客
+
