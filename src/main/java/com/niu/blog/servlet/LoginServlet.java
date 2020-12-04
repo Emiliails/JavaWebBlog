@@ -42,7 +42,7 @@ public class LoginServlet extends HttpServlet {
 		UserService service = new UserService();
 		if (service.exists(userName) && service.loginVerify(userName, password)){
 			//3.正确转主页面的控制器
-			String msg = "成功";
+			String msg = ":)";
 //			msg = URLEncoder.encode(msg,"utf-8");
 			
 			//3.1 保存用户名到会话中

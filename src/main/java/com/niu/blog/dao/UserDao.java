@@ -79,9 +79,8 @@ public class UserDao {
             st.setString(6, user.getPhone());
             st.setString(7, user.getEmail());
             st.setString(8, user.getWeChatId());
-            st.setString(9,user.getDescription());
-            st.setString(10,user.getRegistrationDate());
-
+            st.setString(9, user.getDescription());
+            st.setString(10, user.getRegistrationDate());
 
 
             int ret = st.executeUpdate();
@@ -103,12 +102,21 @@ public class UserDao {
 
         try {
             //4.执行sql
-            String sql = "update users set fullname=? where username=?";
+            //用户的信息至少包括，用户的登录名、密码、用户的姓名、性别、出生日期、手机、Email、微信号、描述信息、注册日期等。
+            String sql = "update users set fullname=?,gender=?,birthday=?,phone=?," +
+                    "email=?,weChatId=?,description=? where username=?";
             st = cn.prepareStatement(sql);
 
             st.setString(1, user.getFullName());
-            st.setString(2, user.getUserName());
+            st.setString(2, user.getGender());
+            st.setString(3, user.getBirthday());
+            st.setString(4, user.getPhone());
+            st.setString(5, user.getEmail());
+            st.setString(6, user.getWeChatId());
+            st.setString(7, user.getDescription());
+            st.setString(8, user.getUserName());
 
+            System.out.println(st);
             int ret = st.executeUpdate();
 
         } catch (SQLException e) {

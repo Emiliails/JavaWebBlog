@@ -23,7 +23,8 @@
 
 <body>
 <%@include file="layout/header.jsp" %>
-主页面！ <br>${msg}<br>
+<h1>主页面</h1>
+<br>${msg}<br>
 
 <a href="displayUserInformation">个人信息</a>
 <a href="modifyUserInformation">修改个人信息</a>
