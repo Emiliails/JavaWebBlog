@@ -23,9 +23,56 @@
 
 <body>
 <%@include file="layout/header.jsp" %>
-个人信息： <br>
-用户名：${ user.userName}<br>
-全名：${user.fullName }
+
+
+<%--个人信息： <br>--%>
+<%--用户名：${ user.userName}<br>--%>
+<%--全名：${user.fullName }--%>
+
+<%--用户的信息至少包括，用户的登录名、密码、用户的姓名、性别、出生日期、手机、Email、微信号、描述信息、注册日期等。--%>
+
+<table class="table">
+    <tbody>
+    <tr>
+        <th>用户名</th>
+        <td>${user.userName}</td>
+    </tr>
+    <tr>
+        <th>姓名</th>
+        <td>${user.fullName}</td>
+    </tr>
+    <tr>
+        <th>性别</th>
+        <td>${user.gender}</td>
+    </tr>
+    <tr>
+        <th>生日</th>
+        <td>${user.birthday}</td>
+    </tr>
+    <tr>
+        <th>手机</th>
+        <td>${user.phone}</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>${user.email}</td>
+    </tr>
+    <tr>
+        <th>微信号</th>
+        <td>${user.weChatId}</td>
+    </tr>
+    <tr>
+        <th>描述信息</th>
+        <td>${user.description}</td>
+    </tr>
+    <tr>
+        <th>注册日期</th>
+        <td>${user.registrationDate}</td>
+    </tr>
+    </tbody>
+</table>
+
+
 <%@include file="layout/footer.jsp" %>
 
 </body>

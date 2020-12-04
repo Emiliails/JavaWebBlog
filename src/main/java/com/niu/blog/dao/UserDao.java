@@ -33,6 +33,14 @@ public class UserDao {
                 user.setUserName(userName);
                 user.setPassword(rs.getString("password"));
                 user.setFullName(rs.getString("fullName"));
+                user.setGender(rs.getString("gender"));
+                user.setBirthday(rs.getString("birthday"));
+                user.setPhone(rs.getString("phone"));
+                user.setEmail(rs.getString("email"));
+                user.setEmail(rs.getString("email"));
+                user.setWeChatId(rs.getString("weChatId"));
+                user.setDescription(rs.getString("description"));
+                user.setRegistrationDate(rs.getString("registrationDate"));
 
                 return user;
             } else {
