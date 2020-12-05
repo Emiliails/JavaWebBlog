@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8" %>
+<%@ page import="com.niu.blog.entity.ArticleType" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
@@ -23,6 +24,9 @@
 
 <body>
 <%@include file="layout/header.jsp" %>
+<%
+    List<ArticleType> articleTypeList = (List<ArticleType>) request.getAttribute("articleTypeList");
+%>
 <h1>添加文章</h1>
 
 <form action="addArticle" method="POST">
@@ -33,16 +37,25 @@
     </div>
     <div class="form-group">
         <label for="articleName">文章名</label>
-        <input type="articleName" class="form-control" id="articleName" name="articleName">
+        <input type="articleName" class="form-control" id="articleName" name="articleName"
+        value=${article.articleName}>
     </div>
     <div class="form-group">
         <label for="articleTypeName">文章类型</label>
-        <input type="articleTypeName" class="form-control" id="articleTypeName" name="articleTypeName"
-               value="${articleTypeName}">
+        <select multiple class="form-control" id="articleTypeName" name="articleTypeName">
+            <%
+                for (ArticleType articleType : articleTypeList) {
+            %>
+            <option><%=articleType.getArticleTypeName()%></option>
+            <%
+                }
+            %>
+        </select>
     </div>
     <div class="form-group">
         <label for="articleContent">文章内容</label>
-        <input type="articleContent" class="form-control" id="articleContent" name="articleContent">
+        <input type="articleContent" class="form-control" id="articleContent" name="articleContent"
+        value=${article.articleContent}>
     </div>
     <span style="color:red">${errorMessage}</span><br>
     <button type="submit" class="btn btn-primary">添加</button>
