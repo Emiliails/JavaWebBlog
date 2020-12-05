@@ -29,6 +29,7 @@
 <a href="displayUserInformation">个人信息</a>
 <a href="modifyUserInformation">修改个人信息</a>
 <a href="modifyUserPassword">修改个人密码</a>
+<a href="addArticleType">添加文章类型</a>
 <a href="logout">注销</a>
 
 <a href="manageUsers">管理用户</a>
