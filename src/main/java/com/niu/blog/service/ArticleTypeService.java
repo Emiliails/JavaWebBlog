@@ -1,7 +1,11 @@
 package com.niu.blog.service;
 
 import com.niu.blog.dao.ArticleTypeDao;
+import com.niu.blog.dao.UserDao;
 import com.niu.blog.entity.ArticleType;
+import com.niu.blog.entity.User;
+
+import java.util.List;
 
 public class ArticleTypeService {
 
@@ -26,5 +30,11 @@ public class ArticleTypeService {
     public ArticleType findByArticleTypeName(String articleTypeName) {
         ArticleTypeDao articleTypeDao = new ArticleTypeDao();
         return articleTypeDao.findByArticleTypeName(articleTypeName);
+    }
+
+    public List<ArticleType> findAll() {
+        ArticleTypeDao articleTypeDao = new ArticleTypeDao();
+
+        return articleTypeDao.findAll();
     }
 }

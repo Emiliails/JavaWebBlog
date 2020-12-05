@@ -2,12 +2,13 @@ package com.niu.blog.dao;
 
 import com.niu.blog.common.DbObject;
 import com.niu.blog.entity.ArticleType;
-import com.niu.blog.entity.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ArticleTypeDao {
     public ArticleType findByArticleTypeName(String articleTypeName) {
@@ -68,5 +69,39 @@ public class ArticleTypeDao {
             DbObject.close(cn, st, null);
         }
         return articleType;
+    }
+
+    public List<ArticleType> findAll() {
+        ArrayList<ArticleType> articleTypeList = new ArrayList<>();
+
+        Connection cn = null;
+        PreparedStatement st = null;
+        ResultSet rs = null;
+
+        cn = DbObject.getConnection();
+        if (cn == null)
+            return null;
+
+        try {
+            //4.执行sql
+            String sql = "select * from articleTypes";
+            st = cn.prepareStatement(sql);
+
+            rs = st.executeQuery();
+            while (rs.next()) {
+                ArticleType articleType = new ArticleType();
+                articleType.setArticleTypeName(rs.getString("articleTypeName"));
+                articleType.setUserName(rs.getString("userName"));
+                articleTypeList.add(articleType);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            //5.关闭数据库连接
+            DbObject.close(cn, st, rs);
+        }
+
+        return articleTypeList;
     }
 }

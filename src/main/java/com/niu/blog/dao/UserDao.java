@@ -154,7 +154,7 @@ public class UserDao {
     }
 
     public List<com.niu.blog.entity.User> findAll() {
-        ArrayList<User> userList = new ArrayList<User>();
+        ArrayList<User> userList = new ArrayList<>();
 
         Connection cn = null;
         PreparedStatement st = null;
@@ -188,6 +188,4 @@ public class UserDao {
 
         return userList;
     }
-
-
 }
