@@ -9,12 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.niu.blog.entity.ArticleType;
-import com.niu.blog.entity.User;
 import com.niu.blog.service.ArticleTypeService;
-import com.niu.blog.service.UserService;
 
 @WebServlet("/addArticleType")
-public class AddArticleTypeServlet extends HttpServlet {
+public class AddArticleType extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -47,7 +45,7 @@ public class AddArticleTypeServlet extends HttpServlet {
         }
 
         //3.-1 检查文章类型是否存在
-        if (articleTypeService.exists(articleType.getArticleTypeName())){
+        if (articleTypeService.exists(userName,articleType.getArticleTypeName())){
             request.setAttribute("userName",userName);
             request.setAttribute("errorMessage", "文章类型已经存在！");
             request.getRequestDispatcher("/addArticleType.jsp").forward(request, response);

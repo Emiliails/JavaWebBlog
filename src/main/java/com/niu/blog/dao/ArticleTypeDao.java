@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ArticleTypeDao {
-    public ArticleType findByArticleTypeName(String articleTypeName) {
+    public ArticleType findByArticleTypeName(String userName, String articleTypeName) {
         Connection cn = null;
         PreparedStatement st = null;
         ResultSet rs = null;
@@ -21,10 +21,12 @@ public class ArticleTypeDao {
             return null;
         try {
             //4.执行sql
-            String sql = "select * from articleTypes where articleTypeName=?";
+            String sql = "select * from articleTypes where articleTypeName=? and userName=?";
             st = cn.prepareStatement(sql);
 
             st.setString(1, articleTypeName);
+            st.setString(2, userName);
+
 
             rs = st.executeQuery();
             if (rs.next()) {

@@ -31,6 +31,7 @@
 <a href="modifyUserPassword">修改个人密码</a>
 <a href="addArticleType">添加文章类型</a>
 <a href="displayArticleType">查看文章类型</a>
+<a href="addArticle">添加文章</a>
 <a href="logout">注销</a>
 
 <a href="manageUsers">管理用户</a>
