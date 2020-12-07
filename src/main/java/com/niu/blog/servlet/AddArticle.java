@@ -29,8 +29,6 @@ public class AddArticle extends HttpServlet {
         request.setAttribute("articleTypeList", articleTypeList);
 
         request.getRequestDispatcher("/addArticle.jsp").forward(request, response);
-
-
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)

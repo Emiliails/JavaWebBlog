@@ -22,4 +22,9 @@ public class ArticleService {
         ArticleDao articleDao = new ArticleDao();
         return articleDao.findAll();
     }
+
+    public Article findByArticleTypeNameAndUserName(String articleTypeName, String userName) {
+        ArticleDao articleDao = new ArticleDao();
+        return articleDao.findByArticleTypeNameAndUserName(articleTypeName,userName);
+    }
 }

@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8" %>
 <%@ page import="com.niu.blog.entity.ArticleType" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
@@ -24,9 +25,6 @@
 
 <body>
 <%@include file="layout/header.jsp" %>
-<%
-    List<ArticleType> articleTypeList = (List<ArticleType>) request.getAttribute("articleTypeList");
-%>
 <h1>添加文章</h1>
 
 <form action="addArticle" method="POST">
@@ -43,13 +41,9 @@
     <div class="form-group">
         <label for="articleTypeName">文章类型</label>
         <select multiple class="form-control" id="articleTypeName" name="articleTypeName">
-            <%
-                for (ArticleType articleType : articleTypeList) {
-            %>
-            <option><%=articleType.getArticleTypeName()%></option>
-            <%
-                }
-            %>
+            <c:forEach items="${articleTypeList}" var="articleType">
+                <option>${articleType.articleTypeName}</option>
+            </c:forEach>
         </select>
     </div>
     <div class="form-group">

@@ -2,7 +2,6 @@ package com.niu.blog.dao;
 
 import com.niu.blog.common.DbObject;
 import com.niu.blog.entity.ArticleType;
-import com.niu.blog.entity.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -47,7 +46,7 @@ public class ArticleTypeDao {
         return articleTypeList;
     }
 
-    public ArticleType findByArticleTypeName(String userName, String articleTypeName) {
+    public ArticleType findByArticleTypeNameAndUserName(String userName, String articleTypeName) {
         Connection cn = null;
         PreparedStatement st = null;
         ResultSet rs = null;
@@ -141,5 +140,32 @@ public class ArticleTypeDao {
         }
 
         return articleTypeList;
+    }
+
+    public ArticleType updateArticleType(String articleTypeName,ArticleType articleType) {
+        Connection cn = null;
+        PreparedStatement st = null;
+
+        cn = DbObject.getConnection();
+
+        try {
+            //4.执行sql
+            String sql = "update articleTypes set articleTypeName=? where articleTypeName=? and userName=?";
+            st = cn.prepareStatement(sql);
+
+            st.setString(1, articleType.getArticleTypeName());
+            st.setString(2, articleTypeName);
+            st.setString(3, articleType.getUserName());
+
+            System.out.println(st);
+            int ret = st.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            //5.关闭数据库连接
+            DbObject.close(cn, st, null);
+        }
+        return articleType;
     }
 }
