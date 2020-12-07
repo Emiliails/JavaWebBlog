@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" import="com.niu.blog.entity.User" pageEncoding="utf-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
@@ -23,9 +24,10 @@
 
 <body>
 <%@include file="layout/header.jsp" %>
-<%
-    List<User> userList = (List<User>) request.getAttribute("userList");
-%>
+<%--<%--%>
+<%--    List<User> userList = (List<User>) request.getAttribute("userList");--%>
+<%--%>--%>
+
 <table border="1">
     <tr>
         <th></th>
@@ -33,20 +35,29 @@
         <th>全名</th>
         <th></th>
     </tr>
-    <%
-        for (int i = 0; i < userList.size(); i++) {
-    %>
-    <tr>
-        <td><input type="checkbox" value="<%=userList.get(i).getUserName()%>" name="userName"></td>
-        <td><%=userList.get(i).getUserName()%>
-        </td>
-        <td><%=userList.get(i).getFullName()%>
-        </td>
-        <td><a href="displayUser?userName=<%=userList.get(i).getUserName()%>">详细</a></td>
-    </tr>
-    <%
-        }
-    %>
+    <c:forEach items="${userList}" var="user">
+        <tr>
+            <td><input type="checkbox" value="${user.userName}" name="userName"></td>
+            <td>${user.userName}</td>
+            <td>${user.fullName}</td>
+            <td><a href="displayUser?userName=${user.fullName}">详细</a></td>
+        </tr>
+    </c:forEach>
+<%--    <%--%>
+<%--        for (int i = 0; i < userList.size(); i++) {--%>
+<%--    %>--%>
+<%--    <tr>--%>
+<%--        <td><input type="checkbox" value="<%=userList.get(i).getUserName()%>" name="userName"></td>--%>
+<%--        <td><%=userList.get(i).getUserName()%>--%>
+<%--        </td>--%>
+<%--        <td><%=userList.get(i).getFullName()%>--%>
+<%--        </td>--%>
+<%--        <td><a href="displayUser?userName=<%=userList.get(i).getUserName()%>">详细</a></td>--%>
+<%--    </tr>--%>
+<%--    <%--%>
+<%--        }--%>
+<%--    %>--%>
+
 </table>
 <%@include file="layout/footer.jsp" %>
 </body>

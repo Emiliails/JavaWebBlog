@@ -1,6 +1,7 @@
 <%@ page language="java" import="java.util.*" import="com.niu.blog.entity.User" pageEncoding="utf-8" %>
 <%@ page import="com.niu.blog.entity.ArticleType" %>
 <%@ page import="com.niu.blog.entity.Article" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
@@ -25,9 +26,9 @@
 
 <body>
 <%@include file="layout/header.jsp" %>
-<%
-    List<Article> articleList = (List<Article>) request.getAttribute("articleList");
-%>
+<%--<%--%>
+<%--    List<Article> articleList = (List<Article>) request.getAttribute("articleList");--%>
+<%--%>--%>
 <table class="table table-hover">
     <thead>
     <tr>
@@ -38,22 +39,30 @@
     </tr>
     </thead>
     <tbody>
-    <%
-        for (Article article : articleList) {
-    %>
-    <tr>
-        <td><%=article.getUserName()%>
-        </td>
-        <td><%=article.getArticleName()%>
-        </td>
-        <td><%=article.getArticleTypeName()%>
-        </td>
-        <td><%=article.getArticleContent()%>
-        </td>
-    </tr>
-    <%
-        }
-    %>
+    <c:forEach items="${articleList}" var="article">
+        <tr>
+            <td>${article.userName}</td>
+            <td>${article.articleName}</td>
+            <td>${article.articleTypeName}</td>
+            <td>${article.articleContent}</td>
+        </tr>
+    </c:forEach>
+<%--    <%--%>
+<%--        for (Article article : articleList) {--%>
+<%--    %>--%>
+<%--    <tr>--%>
+<%--        <td><%=article.getUserName()%>--%>
+<%--        </td>--%>
+<%--        <td><%=article.getArticleName()%>--%>
+<%--        </td>--%>
+<%--        <td><%=article.getArticleTypeName()%>--%>
+<%--        </td>--%>
+<%--        <td><%=article.getArticleContent()%>--%>
+<%--        </td>--%>
+<%--    </tr>--%>
+<%--    <%--%>
+<%--        }--%>
+<%--    %>--%>
     </tbody>
 </table>
 <%@include file="layout/footer.jsp" %>

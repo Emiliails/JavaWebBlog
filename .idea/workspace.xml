@@ -10,11 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa490c04-4eb3-49f2-a78a-231705b89bf2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/modifyArticleType.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/blog_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/blog_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/blog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/displayArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/displayArticle.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/displayArticleType.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/displayArticleType.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manageUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manageUsers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/manageUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/manageUsers.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -189,7 +194,7 @@
       <workItem from="1607088058755" duration="32522000" />
       <workItem from="1607308308248" duration="27000" />
       <workItem from="1607313814334" duration="100000" />
-      <workItem from="1607323969674" duration="3836000" />
+      <workItem from="1607323969674" duration="6471000" />
     </task>
     <task id="LOCAL-00001" summary="添加了用户字段，相应地更改了用户注册部分">
       <created>1606988931155</created>
@@ -261,7 +266,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607219916501</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="修改了主界面">
+      <created>1607328373406</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1607328373406</updated>
+    </task>
+    <task id="LOCAL-00012" summary="添加图片文件">
+      <created>1607328426882</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1607328426882</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +297,9 @@
     <MESSAGE value="修复了不同用户文章类型不能重复的bug" />
     <MESSAGE value="增加了添加文章的功能" />
     <MESSAGE value="增加了查看文章的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加了查看文章的功能" />
+    <MESSAGE value="修改了主界面" />
+    <MESSAGE value="添加图片文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加图片文件" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
