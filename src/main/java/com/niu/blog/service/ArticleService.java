@@ -27,4 +27,9 @@ public class ArticleService {
         ArticleDao articleDao = new ArticleDao();
         return articleDao.findByArticleTypeNameAndUserName(articleTypeName,userName);
     }
+
+    public List<Article> findByUserName(String userName) {
+        ArticleDao articleDao = new ArticleDao();
+        return articleDao.findByUserName(userName);
+    }
 }

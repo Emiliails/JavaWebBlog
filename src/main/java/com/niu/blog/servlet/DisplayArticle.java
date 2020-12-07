@@ -21,9 +21,10 @@ public class DisplayArticle extends HttpServlet {
             throws ServletException, IOException {
 
         ArticleService articleService = new ArticleService();
+        String userName = (String) request.getSession().getAttribute("UserName");
 
-        List<Article> articleList = articleService.findAll();
-
+//        List<Article> articleList = articleService.findAll();
+        List<Article> articleList = articleService.findByUserName(userName);
         request.setAttribute("articleList", articleList);
         request.getRequestDispatcher("/displayArticle.jsp").forward(request, response);
     }

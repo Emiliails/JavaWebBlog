@@ -118,4 +118,42 @@ public class ArticleDao {
 
         return null;
     }
+
+    public List<Article> findByUserName(String userName) {
+        ArrayList<Article> articleList = new ArrayList<>();
+        Connection cn = null;
+        PreparedStatement st = null;
+        ResultSet rs = null;
+
+        cn = DbObject.getConnection();
+        if (cn == null)
+            return null;
+        //用户的信息至少包括，用户的登录名、密码、用户的姓名、性别、出生日期、手机、Email、微信号、描述信息、注册日期等。
+        try {
+            //4.执行sql
+            String sql = "select * from article where username=?";
+
+            st = cn.prepareStatement(sql);
+
+            st.setString(1, userName);
+            System.out.println(st);
+
+            rs = st.executeQuery();
+            while (rs.next()) {
+                Article article = new Article();
+                article.setArticleName(rs.getString("articleName"));
+                article.setArticleTypeName(rs.getString("articleTypeName"));
+                article.setArticleContent(rs.getString("articleContent"));
+                article.setUserName(rs.getString("userName"));
+
+                articleList.add(article);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            //5.关闭数据库连接
+            DbObject.close(cn, st, rs);
+        }
+        return articleList;
+    }
 }
