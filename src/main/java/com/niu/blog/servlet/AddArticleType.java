@@ -27,7 +27,7 @@ public class AddArticleType extends HttpServlet {
         //使用编码转换过滤器拦截request请求并转换编码，不在servlet中处理了
         //request.setCharacterEncoding("utf-8");
 
-        String userName = request.getParameter("userName");
+        String userName = (String) request.getSession().getAttribute("UserName");
 
         ArticleType articleType = new ArticleType();
         articleType.setUserName(request.getParameter("userName"));
@@ -56,7 +56,8 @@ public class AddArticleType extends HttpServlet {
         articleType = articleTypeService.addArticleType(articleType);
 
         request.setAttribute("articleType", articleType);
-        request.getRequestDispatcher("/success.jsp").forward(request, response);
+        request.setAttribute("userName",userName);
+        request.getRequestDispatcher("/addArticleType.jsp").forward(request, response);
     }
 
 }

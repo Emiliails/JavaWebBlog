@@ -168,4 +168,29 @@ public class ArticleTypeDao {
         }
         return articleType;
     }
+
+    public void deleteArticleType(String articleTypeName, String userName) {
+        Connection cn = null;
+        PreparedStatement st = null;
+
+        cn = DbObject.getConnection();
+
+        try {
+            //4.执行sql
+            String sql = "delete from articleTypes where articleTypeName=? and userName=?";
+            st = cn.prepareStatement(sql);
+
+            st.setString(1, articleTypeName);
+            st.setString(2, userName);
+
+            System.out.println(st);
+            int ret = st.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            //5.关闭数据库连接
+            DbObject.close(cn, st, null);
+        }
+    }
 }

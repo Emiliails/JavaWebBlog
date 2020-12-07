@@ -28,6 +28,7 @@
                     <a class="dropdown-item" href="addArticleType">添加文章类型</a>
                     <a class="dropdown-item" href="displayArticleType">查看文章类型</a>
                     <a class="dropdown-item" href="modifyArticleType">修改文章类型</a>
+                    <a class="dropdown-item" href="deleteArticleType">删除文章类型</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="addArticle">添加文章</a>
                     <a class="dropdown-item" href="displayArticle">查看文章</a>

@@ -41,8 +41,13 @@ public class ArticleTypeService {
         return ArticleTypeDao.findByUserName(userName);
     }
 
-    public void updateArticleType(String articleName,ArticleType articleType) {
+    public ArticleType updateArticleType(String articleName,ArticleType articleType) {
         ArticleTypeDao articleTypeDao = new ArticleTypeDao();
-        articleTypeDao.updateArticleType(articleName,articleType);
+        return articleTypeDao.updateArticleType(articleName,articleType);
+    }
+
+    public void deleteArticleType(String articleTypeName, String userName) {
+        ArticleTypeDao articleTypeDao = new ArticleTypeDao();
+        articleTypeDao.deleteArticleType(articleTypeName,userName);
     }
 }
