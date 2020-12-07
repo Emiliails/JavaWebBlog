@@ -10,13 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa490c04-4eb3-49f2-a78a-231705b89bf2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/DisplayArticle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/displayArticle.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/ArticleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/ArticleDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/ArticleTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/ArticleTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/layout/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/main.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,10 +63,10 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="http.proxy" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -189,7 +186,10 @@
       <workItem from="1606972065730" duration="113000" />
       <workItem from="1606972292576" duration="17807000" />
       <workItem from="1607060549883" duration="2928000" />
-      <workItem from="1607088058755" duration="31515000" />
+      <workItem from="1607088058755" duration="32522000" />
+      <workItem from="1607308308248" duration="27000" />
+      <workItem from="1607313814334" duration="100000" />
+      <workItem from="1607323969674" duration="3836000" />
     </task>
     <task id="LOCAL-00001" summary="添加了用户字段，相应地更改了用户注册部分">
       <created>1606988931155</created>
@@ -254,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607178746820</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="增加了查看文章的功能">
+      <created>1607219916500</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607219916501</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +277,8 @@
     <MESSAGE value="增加了文章类型查看功能" />
     <MESSAGE value="修复了不同用户文章类型不能重复的bug" />
     <MESSAGE value="增加了添加文章的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加了添加文章的功能" />
+    <MESSAGE value="增加了查看文章的功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了查看文章的功能" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -23,19 +23,34 @@
 
 <body>
 <%@include file="layout/header.jsp" %>
-<h1>主页面</h1>
-<br>${msg}<br>
-
-<a href="displayUserInformation">个人信息</a>
-<a href="modifyUserInformation">修改个人信息</a>
-<a href="modifyUserPassword">修改个人密码</a>
-<a href="addArticleType">添加文章类型</a>
-<a href="displayArticleType">查看文章类型</a>
-<a href="addArticle">添加文章</a>
-<a href="displayArticle">查看文章</a>
-<a href="logout">注销</a>
-
-<a href="manageUsers">管理用户</a>
+<%--<h1>主页面</h1>--%>
+<%--<br>${msg}<br>--%>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="./img/susan-yin-ImoVrhUBeFs-unsplash.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="./img/ben-wicks-128bVLkKo7o-unsplash.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="./img/jan-weber-mXZdMS2fDdE-unsplash.jpg" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
 <%@include file="layout/footer.jsp" %>
 </body>
 </html>
