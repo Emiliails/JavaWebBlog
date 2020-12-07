@@ -22,6 +22,7 @@
 </head>
 
 <body>
+<div class="container">
 <%@include file="layout/header.jsp" %>
 
 
@@ -74,6 +75,6 @@
 
 
 <%@include file="layout/footer.jsp" %>
-
+</div>
 </body>
 </html>

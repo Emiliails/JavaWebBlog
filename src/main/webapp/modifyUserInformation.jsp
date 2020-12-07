@@ -22,6 +22,7 @@
 </head>
 
 <body>
+<div class="container">
 <%@include file="layout/header.jsp" %>
 <%--<form action="modifyUserInformation" method="post">--%>
 <%--    <input type="hidden" name="userName" value="${user.userName}">--%>
@@ -76,5 +77,6 @@
 </form>
 
 <%@include file="layout/footer.jsp" %>
+</div>
 </body>
 </html>

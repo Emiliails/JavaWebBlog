@@ -24,6 +24,7 @@
 </head>
 
 <body>
+<div class="container">
 <%@include file="layout/header.jsp" %>
 <%--<%--%>
 <%--    List<ArticleType> articleTypeList = (List<ArticleType>) request.getAttribute("articleTypeList");--%>
@@ -57,5 +58,6 @@
     </tbody>
 </table>
 <%@include file="layout/footer.jsp" %>
+</div>
 </body>
 </html>

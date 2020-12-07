@@ -20,9 +20,11 @@
 </head>
 
 <body>
+<div class="container">
 <%@include file="layout/header.jsp" %>
 This is my JSP page. <br>
 <a href="login">登录</a>
 <%@include file="layout/footer.jsp" %>
+</div>
 </body>
 </html>

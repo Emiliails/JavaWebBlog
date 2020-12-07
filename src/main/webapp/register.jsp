@@ -22,6 +22,7 @@
 </head>
 
 <body>
+<div class="container">
 <%@include file="layout/header.jsp" %>
 <h1>用户注册</h1>
 <%--<form action="register" method="post">--%>
@@ -86,5 +87,6 @@
     <button type="submit" class="btn btn-primary">注册</button>
 </form>
 <%@include file="layout/footer.jsp" %>
+</div>
 </body>
 </html>

@@ -23,6 +23,7 @@
 </head>
 
 <body>
+<div class="container">
 <%@include file="layout/header.jsp" %>
 <h1>修改文章类型</h1>
 <form action="modifyArticleType" method="post">
@@ -43,5 +44,6 @@
     <button type="submit" class="btn btn-primary">修改文章类型</button>
 </form>
 <%@include file="layout/footer.jsp" %>
+</div>
 </body>
 </html>

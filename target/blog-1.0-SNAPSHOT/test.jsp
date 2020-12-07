@@ -22,6 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
+  <div class="container">
     <%@include file="layout/header.jsp" %>
     <form action="" method="post">
     	<%
@@ -35,5 +36,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<input type="submit">
     </form>
       <%@include file="layout/footer.jsp" %>
+  </div>
   </body>
 </html>

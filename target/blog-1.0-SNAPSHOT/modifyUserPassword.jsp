@@ -23,6 +23,7 @@
 </head>
 
 <body>
+<div class="container">
 <%@include file="layout/header.jsp" %>
 <form action="modifyUserPassword" method="post">
     <input type="hidden" name="userName" value="${user.userName}">
@@ -33,6 +34,7 @@
     <input type="submit" value="保存">
 </form>
 <%@include file="layout/footer.jsp" %>
+</div>
 </body>
 
 </html>

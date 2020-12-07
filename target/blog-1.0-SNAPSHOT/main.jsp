@@ -22,6 +22,7 @@
 </head>
 
 <body>
+<div class="container">
 <%@include file="layout/header.jsp" %>
 <%--<h1>主页面</h1>--%>
 <%--<br>${msg}<br>--%>
@@ -52,5 +53,6 @@
     </a>
 </div>
 <%@include file="layout/footer.jsp" %>
+</div>
 </body>
 </html>

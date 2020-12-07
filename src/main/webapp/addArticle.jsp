@@ -24,6 +24,7 @@
 </head>
 
 <body>
+<div class="container">
 <%@include file="layout/header.jsp" %>
 <h1>添加文章</h1>
 
@@ -55,5 +56,6 @@
     <button type="submit" class="btn btn-primary">添加</button>
 </form>
 <%@include file="layout/footer.jsp" %>
+</div>
 </body>
 </html>
