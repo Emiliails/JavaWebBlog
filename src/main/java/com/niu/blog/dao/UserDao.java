@@ -41,6 +41,8 @@ public class UserDao {
                 user.setWeChatId(rs.getString("weChatId"));
                 user.setDescription(rs.getString("description"));
                 user.setRegistrationDate(rs.getString("registrationDate"));
+                user.setStatus(rs.getString("status"));
+                user.setRole((rs.getString("role")));
 
                 return user;
             } else {
@@ -175,6 +177,8 @@ public class UserDao {
                 user.setUserName(rs.getString("userName"));
                 user.setPassword(rs.getString("password"));
                 user.setFullName(rs.getString("fullName"));
+                user.setRole(rs.getString("role"));
+                user.setStatus(rs.getString("status"));
 
                 userList.add(user);
             }
@@ -187,5 +191,29 @@ public class UserDao {
         }
 
         return userList;
+    }
+
+    public void modifyUserStatus(String userName, String changedStatus) {
+        Connection cn = null;
+        PreparedStatement st = null;
+
+        cn = DbObject.getConnection();
+
+        try {
+            //4.执行sql
+            String sql = "update users set status=? where username=?";
+            st = cn.prepareStatement(sql);
+
+            st.setString(1, changedStatus);
+            st.setString(2, userName);
+
+            int ret = st.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            //5.关闭数据库连接
+            DbObject.close(cn, st, null);
+        }
     }
 }

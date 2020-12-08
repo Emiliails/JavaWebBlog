@@ -12,6 +12,8 @@ public class User {
     private String weChatId;
     private String description;
     private String registrationDate;
+    private String role;
+    private String status;
 
     public User() {
     }
@@ -94,5 +96,21 @@ public class User {
 
     public void setRegistrationDate(String registrationDate) {
         this.registrationDate = registrationDate;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

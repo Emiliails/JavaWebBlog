@@ -10,21 +10,35 @@ public class UserService {
 	public UserService() {
 	}
 	
-	public boolean loginVerify(String userName, String password){
-		//0.check if username is null
-		//if(userName == null){
-		//	return false;
-		//}
-		
-		//1. 根据用户名从dao对象得到用户的实体对象
+	public String loginVerify(String userName, String password){
+
+		String msg = "success";
+
 		UserDao userDao = new UserDao();
 		User user = userDao.findByUserName(userName);
-		
-		//2. 判断密码是否正确
-		if (user.getPassword().equals(password))
-			return true;
-		else
-			return false;
+
+		if(userName.equals("")){
+			msg = "用户名不能为空";
+			return msg;
+		}
+
+		if (!exists(userName)){
+			msg = "用户名不存在";
+			return msg;
+		}
+
+		if (!user.getPassword().equals(password)){
+			msg = "用户名或密码错误";
+			return msg;
+		}
+
+		if (!user.getStatus().equals("enable")){
+			msg = "用户被禁用";
+			return msg;
+		}
+
+		return msg;
+
 		
 		//3. 判断用户是否禁用
 		
@@ -71,10 +85,7 @@ public class UserService {
 	
 	public boolean exists(String userName){
 		User user = findByUserName(userName);
-		if (user == null)
-			return false;
-		else
-			return true;
+		return user != null;
 	}
 
 	public List<com.niu.blog.entity.User> findAll() {
@@ -84,5 +95,17 @@ public class UserService {
 	}
 
 
+	public void modifyUserStatus(String userName) {
+		UserDao userDao = new UserDao();
+		User user = userDao.findByUserName(userName);
+		String status = user.getStatus();
+		String changedStatus = null;
+		if (status.equals("enabled")){
+			changedStatus = "disabled";
+		}else if (status.equals("disabled")){
+			changedStatus = "enabled";
+		}
 
+		userDao.modifyUserStatus(userName,changedStatus);
+	}
 }

@@ -25,23 +25,25 @@
 <body>
 <div class="container">
 <%@include file="layout/header.jsp" %>
-<%--<%--%>
-<%--    List<User> userList = (List<User>) request.getAttribute("userList");--%>
-<%--%>--%>
 
-<table border="1">
+
+<table class="table">
     <tr>
-        <th></th>
         <th>用户名</th>
-        <th>全名</th>
-        <th></th>
+        <th>姓名</th>
+        <th>角色</th>
+        <th>状态</th>
+        <th>查看用户信息</th>
+        <th>更改用户状态</th>
     </tr>
     <c:forEach items="${userList}" var="user">
         <tr>
-            <td><input type="checkbox" value="${user.userName}" name="userName"></td>
             <td>${user.userName}</td>
             <td>${user.fullName}</td>
-            <td><a href="displayUser?userName=${user.userName}">详细</a></td>
+            <td>${user.role}</td>
+            <td>${user.status}</td>
+            <td><a href="displayUser?userName=${user.userName}">查看</a></td>
+            <td><a href="modifyUserStatus?userName=${user.userName}">更改</a></td>
         </tr>
     </c:forEach>
 
