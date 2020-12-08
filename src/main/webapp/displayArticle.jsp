@@ -26,47 +26,53 @@
 
 <body>
 <div class="container">
-<%@include file="layout/header.jsp" %>
-<%--<%--%>
-<%--    List<Article> articleList = (List<Article>) request.getAttribute("articleList");--%>
-<%--%>--%>
-<table class="table table-hover">
-    <thead>
-    <tr>
-        <th>用户名</th>
-        <th>文章名</th>
-        <th>文章类型</th>
-        <th>文章内容</th>
-    </tr>
-    </thead>
-    <tbody>
-    <c:forEach items="${articleList}" var="article">
+    <%@include file="layout/header.jsp" %>
+    <h1>查看文章</h1>
+    <%--    <table class="table table-hover">--%>
+    <%--        <thead>--%>
+    <%--        <tr>--%>
+    <%--            <th>用户名</th>--%>
+    <%--            <th>文章号</th>--%>
+    <%--            <th>文章名</th>--%>
+    <%--            <th>文章类型</th>--%>
+    <%--            <th>文章内容</th>--%>
+    <%--        </tr>--%>
+    <%--        </thead>--%>
+    <%--        <tbody>--%>
+    <%--        <tr>--%>
+    <%--            <td>${article.userName}</td>--%>
+    <%--            <td>${article.articleId}</td>--%>
+    <%--            <td>${article.articleName}</td>--%>
+    <%--            <td>${article.articleTypeName}</td>--%>
+    <%--            <td><p class="text-justify">${article.articleContent}</p></td>--%>
+    <%--        </tr>--%>
+    <%--        </tbody>--%>
+    <%--    </table>--%>
+
+    <table class="table">
+        <tbody>
         <tr>
+            <th>用户名</th>
             <td>${article.userName}</td>
-            <td>${article.articleName}</td>
-            <td>${article.articleTypeName}</td>
-            <td>${article.articleContent}</td>
         </tr>
-    </c:forEach>
-<%--    <%--%>
-<%--        for (Article article : articleList) {--%>
-<%--    %>--%>
-<%--    <tr>--%>
-<%--        <td><%=article.getUserName()%>--%>
-<%--        </td>--%>
-<%--        <td><%=article.getArticleName()%>--%>
-<%--        </td>--%>
-<%--        <td><%=article.getArticleTypeName()%>--%>
-<%--        </td>--%>
-<%--        <td><%=article.getArticleContent()%>--%>
-<%--        </td>--%>
-<%--    </tr>--%>
-<%--    <%--%>
-<%--        }--%>
-<%--    %>--%>
-    </tbody>
-</table>
-<%@include file="layout/footer.jsp" %>
+        <tr>
+            <th>文章号</th>
+            <td>${article.articleId}</td>
+        </tr>
+        <tr>
+            <th>文章名</th>
+            <td>${article.articleName}</td>
+        </tr>
+        <tr>
+            <th>文章类型</th>
+            <td>${article.articleTypeName}</td>
+        </tr>
+        </tbody>
+    </table>
+    <div>
+        ${article.articleContent}
+    </div>
+    <%@include file="layout/footer.jsp" %>
 </div>
 </body>
 </html>

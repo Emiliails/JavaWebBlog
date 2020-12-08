@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" import="com.niu.blog.entity.User" pageEncoding="utf-8" %>
 <%@ page import="com.niu.blog.entity.ArticleType" %>
+<%@ page import="com.niu.blog.entity.Article" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
     String path = request.getContextPath();
@@ -25,27 +26,38 @@
 
 <body>
 <div class="container">
-<%@include file="layout/header.jsp" %>
-<%--<%--%>
-<%--    List<ArticleType> articleTypeList = (List<ArticleType>) request.getAttribute("articleTypeList");--%>
-<%--%>--%>
-<table class="table table-hover">
-    <thead>
+    <%@include file="layout/header.jsp" %>
+    <%--<%--%>
+    <%--    List<Article> articleList = (List<Article>) request.getAttribute("articleList");--%>
+    <%--%>--%>
+    <h1>管理文章</h1>
+    <table class="table table-hover">
+        <thead>
         <tr>
             <th>用户名</th>
+            <th>文章号</th>
+            <th>文章名</th>
             <th>文章类型</th>
+            <th>查看文章</th>
+            <th>修改文章</th>
+            <th>删除文章</th>
         </tr>
-    </thead>
-    <tbody>
-    <c:forEach items="${articleTypeList}" var="articleType">
-        <tr>
-            <td>${articleType.userName}</td>
-            <td>${articleType.articleTypeName}</td>
-        </tr>
-    </c:forEach>
-    </tbody>
-</table>
-<%@include file="layout/footer.jsp" %>
+        </thead>
+        <tbody>
+        <c:forEach items="${articleList}" var="article">
+            <tr>
+                <td>${article.userName}</td>
+                <td>${article.articleId}</td>
+                <td>${article.articleName}</td>
+                <td>${article.articleTypeName}</td>
+                <td><a href="displayArticle?articleId=${article.articleId}">查看</a></td>
+                <td><a href="displayUser?userName=${article.articleId}">修改</a></td>
+                <td><a href="deleteArticle?articleId=${article.articleId}">删除</a></td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+    <%@include file="layout/footer.jsp" %>
 </div>
 </body>
 </html>

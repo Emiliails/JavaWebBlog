@@ -141,6 +141,7 @@ public class ArticleDao {
             rs = st.executeQuery();
             while (rs.next()) {
                 Article article = new Article();
+                article.setArticleId(rs.getInt("articleId"));
                 article.setArticleName(rs.getString("articleName"));
                 article.setArticleTypeName(rs.getString("articleTypeName"));
                 article.setArticleContent(rs.getString("articleContent"));
@@ -155,5 +156,70 @@ public class ArticleDao {
             DbObject.close(cn, st, rs);
         }
         return articleList;
+    }
+
+    public Article findByArticleId(int articleId) {
+        Connection cn = null;
+        PreparedStatement st = null;
+        ResultSet rs = null;
+
+        cn = DbObject.getConnection();
+        if (cn == null)
+            return null;
+        try {
+            //4.执行sql
+            String sql = "select * from article where articleId=?";
+
+            st = cn.prepareStatement(sql);
+
+            st.setString(1, String.valueOf(articleId));
+            System.out.println(st);
+
+            rs = st.executeQuery();
+            if (rs.next()) {
+                Article article = new Article();
+                article.setArticleId(rs.getInt("articleId"));
+                article.setArticleName(rs.getString("articleName"));
+                article.setArticleTypeName(rs.getString("articleTypeName"));
+                article.setArticleContent(rs.getString("articleContent"));
+                article.setUserName(rs.getString("userName"));
+
+                return article;
+            } else {
+                return null;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            //5.关闭数据库连接
+            DbObject.close(cn, st, rs);
+        }
+
+        return null;
+    }
+
+    public void deleteByArticleId(int articleId) {
+        Connection cn = null;
+        PreparedStatement st = null;
+
+        cn = DbObject.getConnection();
+
+        try {
+            //4.执行sql
+            String sql = "delete from article where articleId=?";
+            st = cn.prepareStatement(sql);
+
+            st.setString(1, String.valueOf(articleId));
+
+            System.out.println(st);
+            int ret = st.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            //5.关闭数据库连接
+            DbObject.close(cn, st, null);
+        }
     }
 }

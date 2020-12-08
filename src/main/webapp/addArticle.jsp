@@ -47,10 +47,16 @@
             </c:forEach>
         </select>
     </div>
+<%--    <div class="form-group">--%>
+<%--        <label for="articleContent">文章内容</label>--%>
+<%--        <input type="articleContent" class="form-control" id="articleContent" name="articleContent"--%>
+<%--        value=${article.articleContent}>--%>
+<%--    </div>--%>
     <div class="form-group">
         <label for="articleContent">文章内容</label>
-        <input type="articleContent" class="form-control" id="articleContent" name="articleContent"
-        value=${article.articleContent}>
+        <textarea class="form-control" id="articleContent" name="articleContent">
+            ${article.articleContent}
+        </textarea>
     </div>
     <span style="color:red">${errorMessage}</span><br>
     <button type="submit" class="btn btn-primary">添加</button>

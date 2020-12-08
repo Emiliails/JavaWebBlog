@@ -32,4 +32,14 @@ public class ArticleService {
         ArticleDao articleDao = new ArticleDao();
         return articleDao.findByUserName(userName);
     }
+
+    public Article findByArticleId(int articleId) {
+        ArticleDao articleDao = new ArticleDao();
+        return articleDao.findByArticleId(articleId);
+    }
+
+    public void deleteByArticleId(int articleId) {
+        ArticleDao articleDao = new ArticleDao();
+        articleDao.deleteByArticleId(articleId);
+    }
 }

@@ -31,7 +31,7 @@
                     <a class="dropdown-item" href="deleteArticleType">删除文章类型</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="addArticle">添加文章</a>
-                    <a class="dropdown-item" href="displayArticle">查看文章</a>
+                    <a class="dropdown-item" href="manageArticle">管理文章</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -40,7 +40,7 @@
                     我的
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="displayUserInformation">个人信息</a>
+                    <a class="dropdown-item" href="displayCurrentUser">个人信息</a>
                     <a class="dropdown-item" href="modifyUserInformation">修改个人信息</a>
                     <a class="dropdown-item" href="modifyUserPassword">修改个人密码</a>
                 </div>
