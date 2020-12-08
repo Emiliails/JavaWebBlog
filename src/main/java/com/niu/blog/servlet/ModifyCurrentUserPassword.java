@@ -11,19 +11,18 @@ import javax.servlet.http.HttpServletResponse;
 import com.niu.blog.entity.User;
 import com.niu.blog.service.UserService;
 
-@WebServlet("/modifyUserPassword")
-public class ModifyUserPassword extends HttpServlet {
+@WebServlet("/modifyCurrentUserPassword")
+public class ModifyCurrentUserPassword extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        String userName = request.getParameter("userName");
+        String userName = (String) request.getSession().getAttribute("UserName");
 
         UserService service = new UserService();
         User user = service.findByUserName(userName);
 
         request.setAttribute("user", user);
-        request.getRequestDispatcher("/modifyUserPassword.jsp").forward(request, response);
+        request.getRequestDispatcher("/modifyCurrentUserPassword.jsp").forward(request, response);
 
     }
 
@@ -38,16 +37,21 @@ public class ModifyUserPassword extends HttpServlet {
         if (request.getParameter("password").equals("")) {
             request.setAttribute("user", user);
             request.setAttribute("errorMessage", "密码不能为空！");
-            request.getRequestDispatcher("/modifyUserPassword.jsp").forward(request, response);
+            request.getRequestDispatcher("/modifyCurrentUserPassword.jsp").forward(request, response);
+            return;
+        }
+        if (!request.getParameter("password").equals(request.getParameter("passwordAgain"))) {
+            request.setAttribute("user", user);
+            request.setAttribute("errorMessage", "两次输入的密码不相同！");
+            request.getRequestDispatcher("/modifyCurrentUserPassword.jsp").forward(request, response);
             return;
         }
 
         UserService service = new UserService();
         user = service.updateUserPassword(user);
 
-        response.sendRedirect("manageUsers");
-//        request.setAttribute("user", user);
-//        request.getRequestDispatcher("/success.jsp").forward(request, response);
+        request.setAttribute("user", user);
+        request.getRequestDispatcher("/success.jsp").forward(request, response);
     }
 
 }

@@ -35,6 +35,7 @@
         <th>状态</th>
         <th>查看用户信息</th>
         <th>修改用户信息</th>
+        <th>修改用户密码</th>
         <th>更改用户状态</th>
     </tr>
     <c:forEach items="${userList}" var="user">
@@ -45,6 +46,7 @@
             <td>${user.status}</td>
             <td><a href="displayUser?userName=${user.userName}">查看</a></td>
             <td><a href="modifyUserInformation?userName=${user.userName}">修改</a></td>
+            <td><a href="modifyUserPassword?userName=${user.userName}">修改</a></td>
             <td><a href="modifyUserStatus?userName=${user.userName}">更改</a></td>
         </tr>
     </c:forEach>

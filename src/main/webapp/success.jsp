@@ -23,11 +23,11 @@
 
 <body>
 <div class="container">
-<%@include file="layout/header.jsp" %>
-注册成功！ <br>
-用户名：${user.userName}<br>
-全名：${user.fullName}<br>
-<%@include file="layout/footer.jsp" %>
+    <%@include file="layout/header.jsp" %>
+    注册成功！ <br>
+    用户名：${user.userName}<br>
+    全名：${user.fullName}<br>
+    <%@include file="layout/footer.jsp" %>
 </div>
 </body>
 </html>

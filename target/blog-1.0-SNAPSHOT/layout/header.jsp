@@ -42,7 +42,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="displayCurrentUser">个人信息</a>
                     <a class="dropdown-item" href="modifyCurrentUserInformation">修改个人信息</a>
-                    <a class="dropdown-item" href="modifyUserPassword">修改个人密码</a>
+                    <a class="dropdown-item" href="modifyCurrentUserPassword">修改个人密码</a>
                 </div>
             </li>
             <li class="nav-item dropdown">

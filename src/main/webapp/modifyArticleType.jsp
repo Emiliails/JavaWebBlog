@@ -24,26 +24,26 @@
 
 <body>
 <div class="container">
-<%@include file="layout/header.jsp" %>
-<h1>修改文章类型</h1>
-<form action="modifyArticleType" method="post">
-    <div class="form-group">
-        <label for="articleTypeName">选择要修改的文章类型</label>
-        <select multiple class="form-control" id="articleTypeName" name="articleTypeName">
-            <c:forEach items="${articleTypeList}" var="articleType">
-                <option>${articleType.articleTypeName}</option>
-            </c:forEach>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="changedArticleTypeName">输入修改后的文章类型</label>
-        <input type="text" class="form-control" id="changedArticleTypeName" name="changedArticleTypeName"
-               value="${changedArticleTypeName}">
-    </div>
-    <span style="color:red">${errorMessage}</span><br>
-    <button type="submit" class="btn btn-primary">修改文章类型</button>
-</form>
-<%@include file="layout/footer.jsp" %>
+    <%@include file="layout/header.jsp" %>
+    <h1>修改文章类型</h1>
+    <form action="modifyArticleType" method="post">
+        <div class="form-group">
+            <label for="articleTypeName">选择要修改的文章类型</label>
+            <select multiple class="form-control" id="articleTypeName" name="articleTypeName">
+                <c:forEach items="${articleTypeList}" var="articleType">
+                    <option>${articleType.articleTypeName}</option>
+                </c:forEach>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="changedArticleTypeName">输入修改后的文章类型</label>
+            <input type="text" class="form-control" id="changedArticleTypeName" name="changedArticleTypeName"
+                   value="${changedArticleTypeName}">
+        </div>
+        <span style="color:red">${errorMessage}</span><br>
+        <button type="submit" class="btn btn-primary">修改文章类型</button>
+    </form>
+    <%@include file="layout/footer.jsp" %>
 </div>
 </body>
 </html>
