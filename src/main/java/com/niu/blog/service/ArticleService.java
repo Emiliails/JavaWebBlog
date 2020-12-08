@@ -42,4 +42,9 @@ public class ArticleService {
         ArticleDao articleDao = new ArticleDao();
         articleDao.deleteByArticleId(articleId);
     }
+
+    public Article updateArticle(Article article) {
+        ArticleDao articleDao = new ArticleDao();
+        return articleDao.updateArticle(article);
+    }
 }

@@ -27,7 +27,7 @@ public class DeleteArticle extends HttpServlet {
         articleService.deleteByArticleId(articleId);
 
 
-        request.getRequestDispatcher("/manageArticle").forward(request, response);
+        response.sendRedirect("manageArticle");
     }
 
 }

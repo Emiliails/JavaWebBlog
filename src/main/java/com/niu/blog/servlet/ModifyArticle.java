@@ -14,8 +14,8 @@ import com.niu.blog.entity.ArticleType;
 import com.niu.blog.service.ArticleService;
 import com.niu.blog.service.ArticleTypeService;
 
-@WebServlet("/addArticle")
-public class AddArticle extends HttpServlet {
+@WebServlet("/modifyArticle")
+public class ModifyArticle extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -28,7 +28,13 @@ public class AddArticle extends HttpServlet {
         List<ArticleType> articleTypeList = articleTypeService.findByUserName(userName);
         request.setAttribute("articleTypeList", articleTypeList);
 
-        request.getRequestDispatcher("/addArticle.jsp").forward(request, response);
+        //获取当前文章号的文章
+        int articleId = Integer.parseInt(request.getParameter("articleId"));
+        ArticleService articleService = new ArticleService();
+        Article article = articleService.findByArticleId(articleId);
+        request.setAttribute("article",article);
+
+        request.getRequestDispatcher("/modifyArticle.jsp").forward(request, response);
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -38,6 +44,7 @@ public class AddArticle extends HttpServlet {
 
         Article article = new Article();
         article.setUserName(request.getParameter("userName"));
+        article.setArticleId(Integer.parseInt(request.getParameter("articleId")));
         article.setArticleName(request.getParameter("articleName"));
         article.setArticleTypeName(request.getParameter("articleTypeName"));
         article.setArticleContent(request.getParameter("articleContent"));
@@ -57,7 +64,7 @@ public class AddArticle extends HttpServlet {
             System.out.println(articleTypeList);
             request.setAttribute("articleTypeList", articleTypeList);
 
-            request.getRequestDispatcher("/addArticle.jsp").forward(request, response);
+            request.getRequestDispatcher("/modifyArticle.jsp").forward(request, response);
             return;
         }
         System.out.println(request.getParameter("articleTypeName"));
@@ -71,7 +78,7 @@ public class AddArticle extends HttpServlet {
             System.out.println(articleTypeList);
             request.setAttribute("articleTypeList", articleTypeList);
 
-            request.getRequestDispatcher("/addArticle.jsp").forward(request, response);
+            request.getRequestDispatcher("/modifyArticle.jsp").forward(request, response);
             return;
         }
 
@@ -85,13 +92,14 @@ public class AddArticle extends HttpServlet {
             System.out.println(articleTypeList);
             request.setAttribute("articleTypeList", articleTypeList);
 
-            request.getRequestDispatcher("/addArticle.jsp").forward(request, response);
+            request.getRequestDispatcher("/modifyArticle.jsp").forward(request, response);
             return;
         }
 
-        //3. 新加文章
-        article = articleService.addArticle(article);
+        //3. 修改文章
+        article = articleService.updateArticle(article);
 
+//        request.getRequestDispatcher("/manageArticle").forward(request, response);
         response.sendRedirect("manageArticle");
     }
 

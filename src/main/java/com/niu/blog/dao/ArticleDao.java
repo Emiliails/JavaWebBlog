@@ -222,4 +222,32 @@ public class ArticleDao {
             DbObject.close(cn, st, null);
         }
     }
+
+    public Article updateArticle(Article article) {
+        Connection cn;
+        PreparedStatement st = null;
+
+        cn = DbObject.getConnection();
+
+        try {
+//            String sql = "insert into article(articleName,userName,articleTypeName,articleContent) values(?,?,?,?)";
+            String sql = "update article set articleName=?,articleTypeName=?,articleContent=? where articleId=?";
+            st = cn.prepareStatement(sql);
+
+            st.setString(1, article.getArticleName());
+            st.setString(2, article.getArticleTypeName());
+            st.setString(3, article.getArticleContent());
+            st.setString(4, String.valueOf(article.getArticleId()));
+
+            System.out.println(st);
+            int ret = st.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            //5.关闭数据库连接
+            DbObject.close(cn, st, null);
+        }
+        return article;
+    }
 }

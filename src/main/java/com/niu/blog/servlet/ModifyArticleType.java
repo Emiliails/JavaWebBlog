@@ -16,7 +16,7 @@ import com.niu.blog.service.ArticleService;
 import com.niu.blog.service.ArticleTypeService;
 
 @WebServlet("/modifyArticleType")
-public class modifyArticleType extends HttpServlet {
+public class ModifyArticleType extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

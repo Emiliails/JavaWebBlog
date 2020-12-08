@@ -10,23 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa490c04-4eb3-49f2-a78a-231705b89bf2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/DeleteArticle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/ManageArticle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/manageArticle.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/ModifyArticle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/modifyArticle.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/ArticleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/ArticleDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/DisplayArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/DisplayArticle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/DisplayUserInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/DisplayCurrentUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addArticle.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/displayArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/displayArticle.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/displayArticleType.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/displayArticleType.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manageUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manageUsers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/DisplayUserInformation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/manageUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/manageUsers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/DisplayUserInformation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/AddArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/AddArticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/DeleteArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/DeleteArticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/modifyArticleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/ModifyArticleType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manageArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manageArticle.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +193,7 @@
       <workItem from="1607088058755" duration="32522000" />
       <workItem from="1607308308248" duration="27000" />
       <workItem from="1607313814334" duration="100000" />
-      <workItem from="1607323969674" duration="32037000" />
+      <workItem from="1607323969674" duration="36735000" />
     </task>
     <task id="LOCAL-00001" summary="添加了用户字段，相应地更改了用户注册部分">
       <created>1606988931155</created>
@@ -322,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607384379828</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="增加了删除文章的功能">
+      <created>1607394448503</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1607394448503</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +345,8 @@
     <MESSAGE value="调整了页面显示效果" />
     <MESSAGE value="修复了普通用户能看到其他用户文章及文章类型的问题" />
     <MESSAGE value="增加了删除文章类型的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加了删除文章类型的功能" />
+    <MESSAGE value="增加了删除文章的功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了删除文章的功能" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

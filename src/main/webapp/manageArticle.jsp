@@ -51,7 +51,7 @@
                 <td>${article.articleName}</td>
                 <td>${article.articleTypeName}</td>
                 <td><a href="displayArticle?articleId=${article.articleId}">查看</a></td>
-                <td><a href="displayUser?userName=${article.articleId}">修改</a></td>
+                <td><a href="modifyArticle?articleId=${article.articleId}">修改</a></td>
                 <td><a href="deleteArticle?articleId=${article.articleId}">删除</a></td>
             </tr>
         </c:forEach>
