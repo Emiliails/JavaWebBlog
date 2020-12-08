@@ -51,6 +51,7 @@
                     管理员
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="addUser">添加用户</a>
                     <a class="dropdown-item" href="manageUsers">管理用户</a>
                 </div>
             </li>

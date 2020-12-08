@@ -32,7 +32,7 @@ public class UserService {
 			return msg;
 		}
 
-		if (!user.getStatus().equals("enabled")){
+		if (!user.getStatus().equals("启用")){
 			msg = "用户被禁用";
 			return msg;
 		}
@@ -100,10 +100,10 @@ public class UserService {
 		User user = userDao.findByUserName(userName);
 		String status = user.getStatus();
 		String changedStatus = null;
-		if (status.equals("enabled")){
-			changedStatus = "disabled";
-		}else if (status.equals("disabled")){
-			changedStatus = "enabled";
+		if (status.equals("启用")){
+			changedStatus = "禁用";
+		}else if (status.equals("禁用")){
+			changedStatus = "启用";
 		}
 
 		userDao.modifyUserStatus(userName,changedStatus);

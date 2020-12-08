@@ -69,7 +69,7 @@ public class UserDao {
             //4.执行sql
             //用户的信息至少包括，用户的登录名、密码、用户的姓名、性别、出生日期、手机、Email、微信号、描述信息、注册日期等。
             String sql = "insert into users (username,password,fullname,gender,birthday,phone,email,weChatId," +
-                    "description,registrationDate) values(?,?,?,?,?,?,?,?,?,?)";
+                    "description,registrationDate,role,status) values(?,?,?,?,?,?,?,?,?,?,?,?)";
             st = cn.prepareStatement(sql);
 //			System.out.println(user.getGender());
 
@@ -83,6 +83,8 @@ public class UserDao {
             st.setString(8, user.getWeChatId());
             st.setString(9, user.getDescription());
             st.setString(10, user.getRegistrationDate());
+            st.setString(11, user.getRole());
+            st.setString(12, user.getStatus());
 
 
             int ret = st.executeUpdate();

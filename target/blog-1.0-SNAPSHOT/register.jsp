@@ -83,6 +83,14 @@
             <label for="description">描述信息</label>
             <input type="text" class="form-control" id="description" name="description" value="${user.description}">
         </div>
+        <div class="form-group">
+            <label for="role">角色</label>
+            <input type="text" class="form-control" id="role" name="role" value="用户" readonly>
+        </div>
+        <div class="form-group">
+            <label for="status">状态</label>
+            <input type="text" class="form-control" id="status" name="status" value="启用" readonly>
+        </div>
         <span style="color:red">${errorMessage}</span><br>
         <button type="submit" class="btn btn-primary">注册</button>
     </form>

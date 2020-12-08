@@ -25,8 +25,7 @@
 <body>
 <div class="container">
 <%@include file="layout/header.jsp" %>
-
-
+<h1>管理用户</h1>
 <table class="table">
     <tr>
         <th>用户名</th>
