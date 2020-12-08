@@ -32,7 +32,7 @@ public class UserService {
 			return msg;
 		}
 
-		if (!user.getStatus().equals("enable")){
+		if (!user.getStatus().equals("enabled")){
 			msg = "用户被禁用";
 			return msg;
 		}
