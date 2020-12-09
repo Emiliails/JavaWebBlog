@@ -21,10 +21,9 @@ public class ManageArticle extends HttpServlet {
             throws ServletException, IOException {
 
         ArticleService articleService = new ArticleService();
-        String userName = (String) request.getSession().getAttribute("UserName");
-
-
-        List<Article> articleList = articleService.findByUserName(userName);
+//        String userName = (String) request.getSession().getAttribute("UserName");
+        List<Article> articleList = articleService.findAll();
+//        List<Article> articleList = articleService.findByUserName(userName);
         request.setAttribute("articleList", articleList);
         request.getRequestDispatcher("/manageArticle.jsp").forward(request, response);
     }

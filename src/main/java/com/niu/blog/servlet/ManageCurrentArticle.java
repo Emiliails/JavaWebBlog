@@ -9,25 +9,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.niu.blog.dao.ArticleTypeDao;
 import com.niu.blog.entity.Article;
-import com.niu.blog.entity.ArticleType;
-import com.niu.blog.service.ArticleService;
-import com.niu.blog.service.ArticleTypeService;
 
-@WebServlet("/deleteArticle")
-public class DeleteArticle extends HttpServlet {
+import com.niu.blog.service.ArticleService;
+
+
+@WebServlet("/manageCurrentArticle")
+public class ManageCurrentArticle extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        int articleId = Integer.parseInt(request.getParameter("articleId"));
-
         ArticleService articleService = new ArticleService();
-        articleService.deleteByArticleId(articleId);
+        String userName = (String) request.getSession().getAttribute("UserName");
 
 
-        response.sendRedirect("manageCurrentArticle");
+        List<Article> articleList = articleService.findByUserName(userName);
+        request.setAttribute("articleList", articleList);
+        request.getRequestDispatcher("/manageCurrentArticle.jsp").forward(request, response);
     }
 
 }

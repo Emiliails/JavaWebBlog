@@ -18,7 +18,6 @@ public class ArticleService {
     }
 
     public List<Article> findAll() {
-        UserDao userDao = new UserDao();
         ArticleDao articleDao = new ArticleDao();
         return articleDao.findAll();
     }

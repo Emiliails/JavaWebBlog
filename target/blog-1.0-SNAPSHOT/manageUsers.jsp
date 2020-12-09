@@ -26,7 +26,7 @@
 <div class="container">
 <%@include file="layout/header.jsp" %>
 <h1>管理用户</h1>
-<table class="table">
+<table class="table table-hover">
     <tr>
         <th>用户名</th>
         <th>姓名</th>

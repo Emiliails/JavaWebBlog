@@ -92,7 +92,7 @@ public class AddArticle extends HttpServlet {
         //3. 新加文章
         article = articleService.addArticle(article);
 
-        response.sendRedirect("manageArticle");
+        response.sendRedirect("manageCurrentArticle");
     }
 
 }

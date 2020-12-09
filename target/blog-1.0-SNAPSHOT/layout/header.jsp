@@ -16,13 +16,19 @@
             <li class="nav-item active">
                 <a class="nav-link" href="main">主页 <span class="sr-only">(current)</span></a>
             </li>
-            <%--			<li class="nav-item">--%>
-            <%--				<a class="nav-link" href="">文章</a>--%>
-            <%--			</li>--%>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="VisitorDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    访客
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="manageArticle">所有文章</a>
+                </div>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="ArticleDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
-                    文章
+                    写作
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="addArticleType">添加文章类型</a>
@@ -31,9 +37,10 @@
                     <a class="dropdown-item" href="deleteArticleType">删除文章类型</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="addArticle">添加文章</a>
-                    <a class="dropdown-item" href="manageArticle">管理文章</a>
+                    <a class="dropdown-item" href="manageCurrentArticle">管理文章</a>
                 </div>
             </li>
+
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="UserDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">

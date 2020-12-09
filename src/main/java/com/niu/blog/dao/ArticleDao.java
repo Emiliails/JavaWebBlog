@@ -59,6 +59,7 @@ public class ArticleDao {
             while (rs.next()) {
                 User user = new User();
                 Article article = new Article();
+                article.setArticleId(rs.getInt("articleId"));
                 article.setArticleName(rs.getString("articleName"));
                 article.setArticleTypeName(rs.getString("articleTypeName"));
                 article.setArticleContent(rs.getString("articleContent"));

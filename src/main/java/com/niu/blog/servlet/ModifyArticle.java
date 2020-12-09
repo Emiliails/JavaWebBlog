@@ -100,7 +100,7 @@ public class ModifyArticle extends HttpServlet {
         article = articleService.updateArticle(article);
 
 //        request.getRequestDispatcher("/manageArticle").forward(request, response);
-        response.sendRedirect("manageArticle");
+        response.sendRedirect("manageCurrentArticle");
     }
 
 }
