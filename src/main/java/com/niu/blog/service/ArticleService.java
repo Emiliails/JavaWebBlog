@@ -46,4 +46,9 @@ public class ArticleService {
         ArticleDao articleDao = new ArticleDao();
         return articleDao.updateArticle(article);
     }
+
+    public List<Article> findByArticleNameLike(String articleNameLike) {
+        ArticleDao articleDao = new ArticleDao();
+        return articleDao.findByArticleNameLike(articleNameLike);
+    }
 }

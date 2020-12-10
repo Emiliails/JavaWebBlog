@@ -23,6 +23,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="manageArticle">所有文章</a>
+                    <a class="dropdown-item" href="searchArticle">查询文章</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -66,9 +67,9 @@
                 <a class="nav-link" href="logout">注销</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
-        </form>
+<%--        <form class="form-inline my-2 my-lg-0">--%>
+<%--            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">--%>
+<%--            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>--%>
+<%--        </form>--%>
     </div>
 </nav>

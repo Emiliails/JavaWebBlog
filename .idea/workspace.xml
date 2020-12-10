@@ -10,17 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa490c04-4eb3-49f2-a78a-231705b89bf2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/ManageCurrentArticle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/manageCurrentArticle.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/SearchArticle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/searchArticle.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/ArticleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/ArticleDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/AddArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/AddArticle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/DeleteArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/DeleteArticle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/ManageArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/ManageArticle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/ModifyArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/ModifyArticle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manageArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manageArticle.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/layout/header.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +45,9 @@
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1l7wvnoJOqTcVhmm5r27IuXKpoW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -198,7 +197,9 @@
       <workItem from="1607313814334" duration="100000" />
       <workItem from="1607323969674" duration="50813000" />
       <workItem from="1607429320610" duration="464000" />
-      <workItem from="1607429797315" duration="8335000" />
+      <workItem from="1607429797315" duration="9033000" />
+      <workItem from="1607563733921" duration="167000" />
+      <workItem from="1607589538724" duration="3178000" />
     </task>
     <task id="LOCAL-00001" summary="添加了用户字段，相应地更改了用户注册部分">
       <created>1606988931155</created>
@@ -361,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607438742061</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="增加了查看所有文章的功能">
+      <created>1607476608297</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1607476608297</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,7 +399,8 @@
     <MESSAGE value="增加了管理员修改用户信息的功能" />
     <MESSAGE value="增加了管理员修改用户密码的功能" />
     <MESSAGE value="增加了管理员添加用户的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加了管理员添加用户的功能" />
+    <MESSAGE value="增加了查看所有文章的功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了查看所有文章的功能" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

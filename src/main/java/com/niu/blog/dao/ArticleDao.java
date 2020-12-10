@@ -251,4 +251,46 @@ public class ArticleDao {
         }
         return article;
     }
+
+    public List<Article> findByArticleNameLike(String articleNameLike) {
+        ArrayList<Article> articleList = new ArrayList<>();
+
+        Connection cn = null;
+        PreparedStatement st = null;
+        ResultSet rs = null;
+
+        cn = DbObject.getConnection();
+        if (cn == null)
+            return null;
+
+        try {
+            //4.执行sql
+            String sql = "select * from article where articleName like ?";
+            st = cn.prepareStatement(sql);
+            st.setString(1, "%"+articleNameLike+"%");
+            System.out.println(st);
+
+
+            rs = st.executeQuery();
+            while (rs.next()) {
+                User user = new User();
+                Article article = new Article();
+                article.setArticleId(rs.getInt("articleId"));
+                article.setArticleName(rs.getString("articleName"));
+                article.setArticleTypeName(rs.getString("articleTypeName"));
+                article.setArticleContent(rs.getString("articleContent"));
+                article.setUserName(rs.getString("userName"));
+
+                articleList.add(article);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            //5.关闭数据库连接
+            DbObject.close(cn, st, rs);
+        }
+
+        return articleList;
+    }
 }
