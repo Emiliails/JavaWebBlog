@@ -51,4 +51,9 @@ public class ArticleService {
         ArticleDao articleDao = new ArticleDao();
         return articleDao.findByArticleNameLike(articleNameLike);
     }
+
+    public List<Article> findByUserNameAndArticleTypeName(String userName, String articleTypeName) {
+        ArticleDao articleDao = new ArticleDao();
+        return  articleDao.findByUserNameAndArticleTypeName(userName,articleTypeName);
+    }
 }

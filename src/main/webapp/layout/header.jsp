@@ -34,7 +34,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="addArticleType">添加文章类型</a>
-                    <a class="dropdown-item" href="displayArticleType">查看文章类型</a>
+                    <a class="dropdown-item" href="displayCurrentArticleType">查看文章类型</a>
                     <a class="dropdown-item" href="modifyArticleType">修改文章类型</a>
                     <a class="dropdown-item" href="deleteArticleType">删除文章类型</a>
                     <div class="dropdown-divider"></div>
@@ -68,9 +68,9 @@
                 <a class="nav-link" href="logout">注销</a>
             </li>
         </ul>
-<%--        <form class="form-inline my-2 my-lg-0">--%>
-<%--            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">--%>
-<%--            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>--%>
-<%--        </form>--%>
+        <%--        <form class="form-inline my-2 my-lg-0">--%>
+        <%--            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">--%>
+        <%--            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>--%>
+        <%--        </form>--%>
     </div>
 </nav>

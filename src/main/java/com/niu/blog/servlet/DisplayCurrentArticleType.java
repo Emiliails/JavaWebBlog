@@ -14,15 +14,16 @@ import com.niu.blog.entity.ArticleType;
 import com.niu.blog.service.ArticleTypeService;
 
 
-@WebServlet("/displayArticleType")
-public class DisplayArticleType extends HttpServlet {
+@WebServlet("/displayCurrentArticleType")
+public class DisplayCurrentArticleType extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String userName = request.getParameter("userName");
+        String userName = (String) request.getSession().getAttribute("UserName");
         ArticleTypeService articleTypeService = new ArticleTypeService();
 
+//        List<ArticleType> articleTypeList = articleTypeService.findAll();
         List<ArticleType> articleTypeList = articleTypeService.findByUserName(userName);
         request.setAttribute("articleTypeList", articleTypeList);
         request.getRequestDispatcher("/displayArticleType.jsp").forward(request, response);

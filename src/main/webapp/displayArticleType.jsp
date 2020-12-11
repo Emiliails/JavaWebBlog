@@ -25,27 +25,31 @@
 
 <body>
 <div class="container">
-<%@include file="layout/header.jsp" %>
-<%--<%--%>
-<%--    List<ArticleType> articleTypeList = (List<ArticleType>) request.getAttribute("articleTypeList");--%>
-<%--%>--%>
-<table class="table table-hover">
-    <thead>
+    <%@include file="layout/header.jsp" %>
+    <%--<%--%>
+    <%--    List<ArticleType> articleTypeList = (List<ArticleType>) request.getAttribute("articleTypeList");--%>
+    <%--%>--%>
+    <table class="table table-hover">
+        <thead>
         <tr>
             <th>用户名</th>
             <th>文章类型</th>
+            <th>查看文章</th>
         </tr>
-    </thead>
-    <tbody>
-    <c:forEach items="${articleTypeList}" var="articleType">
-        <tr>
-            <td>${articleType.userName}</td>
-            <td>${articleType.articleTypeName}</td>
-        </tr>
-    </c:forEach>
-    </tbody>
-</table>
-<%@include file="layout/footer.jsp" %>
+        </thead>
+        <tbody>
+        <c:forEach items="${articleTypeList}" var="articleType">
+            <tr>
+                <td>${articleType.userName}</td>
+                <td>${articleType.articleTypeName}</td>
+                <td>
+                    <a href="manageArticleByUserNameAndArticleType?userName=${articleType.userName}&articleTypeName=${articleType.articleTypeName}">查看</a>
+                </td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+    <%@include file="layout/footer.jsp" %>
 </div>
 </body>
 </html>
