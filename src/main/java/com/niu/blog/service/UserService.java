@@ -113,4 +113,9 @@ public class UserService {
 		UserDao userDao = new UserDao();
 		return userDao.findByFullNameOrDescriptionLike(fullNameOrDescriptionLike);
 	}
+
+    public boolean isAdministrator(String userName) {
+		UserDao userDao = new UserDao();
+		return userDao.isAdministrator(userName);
+    }
 }

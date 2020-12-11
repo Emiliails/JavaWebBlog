@@ -16,6 +16,12 @@ public class addUser extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String userName = (String) request.getSession().getAttribute("UserName");
+        UserService userService = new UserService();
+        if (!userService.isAdministrator(userName)){
+            response.sendRedirect("main");
+            return;
+        }
         request.getRequestDispatcher("/addUser.jsp").forward(request, response);
     }
 

@@ -235,8 +235,8 @@ public class UserDao {
             String sql = "select * from users where fullName like ? or description like ?";
             st = cn.prepareStatement(sql);
 
-            st.setString(1, "%"+fullNameOrDescriptionLike+"%");
-            st.setString(2, "%"+fullNameOrDescriptionLike+"%");
+            st.setString(1, "%" + fullNameOrDescriptionLike + "%");
+            st.setString(2, "%" + fullNameOrDescriptionLike + "%");
 
             rs = st.executeQuery();
             while (rs.next()) {
@@ -258,5 +258,38 @@ public class UserDao {
         }
 
         return userList;
+    }
+
+    public boolean isAdministrator(String userName) {
+        Connection cn = null;
+        PreparedStatement st = null;
+        ResultSet rs = null;
+
+        cn = DbObject.getConnection();
+
+        //用户的信息至少包括，用户的登录名、密码、用户的姓名、性别、出生日期、手机、Email、微信号、描述信息、注册日期等。
+        try {
+            //4.执行sql
+            String sql = "select role from users where username=?";
+            st = cn.prepareStatement(sql);
+
+            st.setString(1, userName);
+
+            rs = st.executeQuery();
+            if (rs.next()) {
+                String role = rs.getString("role");
+                return role.equals("管理员");
+            } else {
+                return false;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            //5.关闭数据库连接
+            DbObject.close(cn, st, rs);
+        }
+
+        return false;
     }
 }

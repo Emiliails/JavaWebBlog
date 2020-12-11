@@ -16,9 +16,15 @@ import com.niu.blog.service.UserService;
 public class ManageUsers extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		UserService service = new UserService();
+		String userName = (String) request.getSession().getAttribute("UserName");
+		UserService userService = new UserService();
+		if (!userService.isAdministrator(userName)){
+			response.sendRedirect("main");
+			return;
+		}
+
 		
-		List<User> userList = service.findAll();
+		List<User> userList = userService.findAll();
 		
 		request.setAttribute("userList", userList);
 		request.getRequestDispatcher("/manageUsers.jsp").forward(request, response);

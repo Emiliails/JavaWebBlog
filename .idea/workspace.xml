@@ -9,17 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa490c04-4eb3-49f2-a78a-231705b89bf2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/DisplayCurrentArticleType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/ManageArticleByUserNameAndArticleType.java" afterDir="false" />
+    <list default="true" id="aa490c04-4eb3-49f2-a78a-231705b89bf2" name="Default Changelist" comment="增加了透过文章分类查看文章的功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/ArticleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/ArticleDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/DisplayArticleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/DisplayArticleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/displayArticleType.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/displayArticleType.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/searchUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/searchUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/layout/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/filter/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/filter/LoginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/ManageUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/ManageUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/addUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/addUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/filter/LoginFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/filter/LoginFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niu/blog/filter/LoginFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/filter/LoginFilter.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,9 +45,6 @@
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1l7wvnoJOqTcVhmm5r27IuXKpoW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -204,7 +199,7 @@
       <workItem from="1607429797315" duration="9033000" />
       <workItem from="1607563733921" duration="167000" />
       <workItem from="1607589538724" duration="10813000" />
-      <workItem from="1607685084857" duration="1861000" />
+      <workItem from="1607685084857" duration="5484000" />
     </task>
     <task id="LOCAL-00001" summary="添加了用户字段，相应地更改了用户注册部分">
       <created>1606988931155</created>
@@ -395,14 +390,20 @@
       <option name="project" value="LOCAL" />
       <updated>1607666907663</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="增加了透过文章分类查看文章的功能">
+      <created>1607688425121</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1607688425121</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="完善了用户信息显示功能" />
     <MESSAGE value="完善了用户信息修改功能" />
     <MESSAGE value="增加了文章类型添加功能" />
     <MESSAGE value="增加了文章类型查看功能" />
@@ -427,7 +428,8 @@
     <MESSAGE value="增加了按姓名或描述信息模糊查询用户的功能" />
     <MESSAGE value="增加了查询用户后查看其文章的功能" />
     <MESSAGE value="增加了查询用户后查看其所有文章的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加了查询用户后查看其所有文章的功能" />
+    <MESSAGE value="增加了透过文章分类查看文章的功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了透过文章分类查看文章的功能" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
