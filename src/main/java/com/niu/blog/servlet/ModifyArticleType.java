@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.niu.blog.dao.ArticleTypeDao;
-import com.niu.blog.entity.Article;
 import com.niu.blog.entity.ArticleType;
 import com.niu.blog.service.ArticleService;
 import com.niu.blog.service.ArticleTypeService;

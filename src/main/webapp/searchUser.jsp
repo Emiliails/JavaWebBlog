@@ -37,6 +37,7 @@
         <tr>
             <th>用户名</th>
             <th>姓名</th>
+            <th>查看文章</th>
 <%--            <th>角色</th>--%>
 <%--            <th>状态</th>--%>
 <%--            <th>查看用户信息</th>--%>
@@ -48,6 +49,7 @@
             <tr>
                 <td>${user.userName}</td>
                 <td>${user.fullName}</td>
+                <td><a href="manageArticleByUser?userName=${user.userName}">查看</a></td>
 <%--                <td>${user.role}</td>--%>
 <%--                <td>${user.status}</td>--%>
 <%--                <td><a href="displayUser?userName=${user.userName}">查看</a></td>--%>
