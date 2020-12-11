@@ -27,33 +27,36 @@
 <body>
 <div class="container">
     <%@include file="layout/header.jsp" %>
-    <h1>查询文章</h1>
-    <form class="form-inline my-2 my-lg-0" action="searchArticle" method="post">
+    <h1>查询用户</h1>
+    <form class="form-inline my-2 my-lg-0" action="searchUser" method="post">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
-               name="articleNameLike" id="articleNameLike">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">按文章名模糊查询</button>
+               name="fullNameOrDescriptionLike" id="fullNameOrDescriptionLike">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">按姓名或描述信息模糊查询</button>
     </form>
     <table class="table table-hover">
-        <thead>
         <tr>
             <th>用户名</th>
-            <th>文章号</th>
-            <th>文章名</th>
-            <th>文章类型</th>
-            <th>查看文章</th>
+            <th>姓名</th>
+<%--            <th>角色</th>--%>
+<%--            <th>状态</th>--%>
+<%--            <th>查看用户信息</th>--%>
+<%--            <th>修改用户信息</th>--%>
+<%--            <th>修改用户密码</th>--%>
+<%--            <th>更改用户状态</th>--%>
         </tr>
-        </thead>
-        <tbody>
-        <c:forEach items="${articleList}" var="article">
+        <c:forEach items="${userList}" var="user">
             <tr>
-                <td>${article.userName}</td>
-                <td>${article.articleId}</td>
-                <td>${article.articleName}</td>
-                <td>${article.articleTypeName}</td>
-                <td><a href="displayArticle?articleId=${article.articleId}">查看</a></td>
+                <td>${user.userName}</td>
+                <td>${user.fullName}</td>
+<%--                <td>${user.role}</td>--%>
+<%--                <td>${user.status}</td>--%>
+<%--                <td><a href="displayUser?userName=${user.userName}">查看</a></td>--%>
+<%--                <td><a href="modifyUserInformation?userName=${user.userName}">修改</a></td>--%>
+<%--                <td><a href="modifyUserPassword?userName=${user.userName}">修改</a></td>--%>
+<%--                <td><a href="modifyUserStatus?userName=${user.userName}">更改</a></td>--%>
             </tr>
         </c:forEach>
-        </tbody>
+
     </table>
     <%@include file="layout/footer.jsp" %>
 </div>

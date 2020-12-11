@@ -24,6 +24,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="manageArticle">所有文章</a>
                     <a class="dropdown-item" href="searchArticle">查询文章</a>
+                    <a class="dropdown-item" href="searchUser">查询用户</a>
                 </div>
             </li>
             <li class="nav-item dropdown">

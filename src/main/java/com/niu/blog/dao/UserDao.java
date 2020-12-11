@@ -218,4 +218,45 @@ public class UserDao {
             DbObject.close(cn, st, null);
         }
     }
+
+    public List<User> findByFullNameOrDescriptionLike(String fullNameOrDescriptionLike) {
+        ArrayList<User> userList = new ArrayList<>();
+
+        Connection cn = null;
+        PreparedStatement st = null;
+        ResultSet rs = null;
+
+        cn = DbObject.getConnection();
+        if (cn == null)
+            return null;
+
+        try {
+            //4.执行sql
+            String sql = "select * from users where fullName like ? or description like ?";
+            st = cn.prepareStatement(sql);
+
+            st.setString(1, "%"+fullNameOrDescriptionLike+"%");
+            st.setString(2, "%"+fullNameOrDescriptionLike+"%");
+
+            rs = st.executeQuery();
+            while (rs.next()) {
+                User user = new User();
+                user.setUserName(rs.getString("userName"));
+                user.setPassword(rs.getString("password"));
+                user.setFullName(rs.getString("fullName"));
+                user.setRole(rs.getString("role"));
+                user.setStatus(rs.getString("status"));
+
+                userList.add(user);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            //5.关闭数据库连接
+            DbObject.close(cn, st, rs);
+        }
+
+        return userList;
+    }
 }

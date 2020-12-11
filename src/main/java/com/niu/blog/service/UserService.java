@@ -108,4 +108,9 @@ public class UserService {
 
 		userDao.modifyUserStatus(userName,changedStatus);
 	}
+
+	public List<User> findByFullNameOrDescriptionLike(String fullNameOrDescriptionLike) {
+		UserDao userDao = new UserDao();
+		return userDao.findByFullNameOrDescriptionLike(fullNameOrDescriptionLike);
+	}
 }
