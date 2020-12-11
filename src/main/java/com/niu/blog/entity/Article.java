@@ -6,6 +6,8 @@ public class Article {
     private String articleTypeName;
     private String articleContent;
     private String userName;
+    private String articleCreateDate;
+    private String articleModifyDate;
 
     public Article() {
     }
@@ -48,5 +50,21 @@ public class Article {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getArticleCreateDate() {
+        return articleCreateDate;
+    }
+
+    public void setArticleCreateDate(String articleCreateDate) {
+        this.articleCreateDate = articleCreateDate;
+    }
+
+    public String getArticleModifyDate() {
+        return articleModifyDate;
+    }
+
+    public void setArticleModifyDate(String articleModifyDate) {
+        this.articleModifyDate = articleModifyDate;
     }
 }

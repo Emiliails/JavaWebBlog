@@ -19,7 +19,6 @@ public class DisplayArticle extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-//        String userName = (String) request.getSession().getAttribute("UserName");
         int articleId = Integer.parseInt(request.getParameter("articleId"));
 
         ArticleService articleService = new ArticleService();

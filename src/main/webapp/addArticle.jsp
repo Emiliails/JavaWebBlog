@@ -47,11 +47,11 @@
             </c:forEach>
         </select>
     </div>
-<%--    <div class="form-group">--%>
-<%--        <label for="articleContent">文章内容</label>--%>
-<%--        <input type="articleContent" class="form-control" id="articleContent" name="articleContent"--%>
-<%--        value=${article.articleContent}>--%>
-<%--    </div>--%>
+    <div class="form-group">
+        <label for="articleCreateDate">创建日期</label>
+        <input type="text" class="form-control" id="articleCreateDate" name="articleCreateDate"
+               value="<%=java.time.LocalDate.now()%>" readonly>
+    </div>
     <div class="form-group">
         <label for="articleContent">文章内容</label>
         <textarea class="form-control" id="articleContent" name="articleContent">

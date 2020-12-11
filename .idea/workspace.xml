@@ -9,15 +9,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa490c04-4eb3-49f2-a78a-231705b89bf2" name="Default Changelist" comment="增加了透过文章分类查看文章的功能">
+    <list default="true" id="aa490c04-4eb3-49f2-a78a-231705b89bf2" name="Default Changelist" comment="增加了">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/ArticleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/ArticleDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/filter/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/filter/LoginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/entity/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/entity/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/ArticleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/ManageUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/ManageUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/addUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/addUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/filter/LoginFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/filter/LoginFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/niu/blog/filter/LoginFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/filter/LoginFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/AddArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/AddArticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/DisplayArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/DisplayArticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/ModifyArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/ModifyArticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/RegisterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/addUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/AddUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addArticle.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/displayArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/displayArticle.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manageArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manageArticle.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/modifyArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/modifyArticle.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/ManageUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/ManageUsers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/RegisterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/RegisterServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niu/blog/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niu/blog/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/ManageUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/ManageUsers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/RegisterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/RegisterServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +215,7 @@
       <workItem from="1607429797315" duration="9033000" />
       <workItem from="1607563733921" duration="167000" />
       <workItem from="1607589538724" duration="10813000" />
-      <workItem from="1607685084857" duration="5484000" />
+      <workItem from="1607685084857" duration="11396000" />
     </task>
     <task id="LOCAL-00001" summary="添加了用户字段，相应地更改了用户注册部分">
       <created>1606988931155</created>
@@ -397,14 +413,20 @@
       <option name="project" value="LOCAL" />
       <updated>1607688425121</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="修复了访客和管理员功能权限的问题">
+      <created>1607696355031</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1607696355031</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="完善了用户信息修改功能" />
     <MESSAGE value="增加了文章类型添加功能" />
     <MESSAGE value="增加了文章类型查看功能" />
     <MESSAGE value="修复了不同用户文章类型不能重复的bug" />
@@ -429,7 +451,8 @@
     <MESSAGE value="增加了查询用户后查看其文章的功能" />
     <MESSAGE value="增加了查询用户后查看其所有文章的功能" />
     <MESSAGE value="增加了透过文章分类查看文章的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加了透过文章分类查看文章的功能" />
+    <MESSAGE value="修复了访客和管理员功能权限的问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复了访客和管理员功能权限的问题" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

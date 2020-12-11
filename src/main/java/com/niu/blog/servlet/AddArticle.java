@@ -41,6 +41,7 @@ public class AddArticle extends HttpServlet {
         article.setArticleName(request.getParameter("articleName"));
         article.setArticleTypeName(request.getParameter("articleTypeName"));
         article.setArticleContent(request.getParameter("articleContent"));
+        article.setArticleCreateDate(request.getParameter("articleCreateDate"));
         //2. 检查数据
 
         ArticleService articleService = new ArticleService();

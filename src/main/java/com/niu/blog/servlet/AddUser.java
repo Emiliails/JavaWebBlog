@@ -12,7 +12,7 @@ import com.niu.blog.entity.User;
 import com.niu.blog.service.UserService;
 
 @WebServlet("/addUser")
-public class addUser extends HttpServlet {
+public class AddUser extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

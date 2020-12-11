@@ -48,6 +48,7 @@ public class ModifyArticle extends HttpServlet {
         article.setArticleName(request.getParameter("articleName"));
         article.setArticleTypeName(request.getParameter("articleTypeName"));
         article.setArticleContent(request.getParameter("articleContent"));
+        article.setArticleModifyDate(request.getParameter("articleModifyDate"));
         //2. 检查数据
 
         ArticleService articleService = new ArticleService();

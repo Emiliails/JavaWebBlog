@@ -86,6 +86,8 @@ public class UserDao {
             st.setString(11, user.getRole());
             st.setString(12, user.getStatus());
 
+            System.out.println(st);
+
 
             int ret = st.executeUpdate();
 

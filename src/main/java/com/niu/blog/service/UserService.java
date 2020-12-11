@@ -50,32 +50,26 @@ public class UserService {
 	
 	public User addUser(User user){
 		UserDao userDao = new UserDao();
-		
-		User newUser = userDao.addUser(user);
-		
+
 		//记录日志等。。。。。。
 		
-		return newUser;
+		return userDao.addUser(user);
 	}
 
 	public User updateUser(User user){
 		UserDao userDao = new UserDao();
-		
-		User newUser = userDao.updateUser(user);
-		
+
 		//记录日志等。。。。。。
 		
-		return newUser;
+		return userDao.updateUser(user);
 	}
 	
 	public User updateUserPassword(User user) {
 		UserDao userDao = new UserDao();
-		
-		User newUser = userDao.updateUserPassword(user);
-		
+
 		//记录日志等。。。。。。
 		
-		return newUser;
+		return userDao.updateUserPassword(user);
 	}
 	
 	public User findByUserName(String userName) {

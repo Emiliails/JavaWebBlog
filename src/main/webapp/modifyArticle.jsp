@@ -53,6 +53,11 @@
             </select>
         </div>
         <div class="form-group">
+            <label for="articleModifyDate">修改日期</label>
+            <input type="text" class="form-control" id="articleModifyDate" name="articleModifyDate"
+                   value="<%=java.time.LocalDate.now()%>" readonly>
+        </div>
+        <div class="form-group">
             <label for="articleContent">文章内容</label>
             <textarea class="form-control" id="articleContent" name="articleContent">
                 ${article.articleContent}

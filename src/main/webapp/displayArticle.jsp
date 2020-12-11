@@ -67,6 +67,14 @@
             <th>文章类型</th>
             <td>${article.articleTypeName}</td>
         </tr>
+        <tr>
+            <th>创建日期</th>
+            <td>${article.articleCreateDate}</td>
+        </tr>
+        <tr>
+            <th>修改日期</th>
+            <td>${article.articleModifyDate}</td>
+        </tr>
         </tbody>
     </table>
     <div>

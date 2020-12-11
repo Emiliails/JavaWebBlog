@@ -19,13 +19,14 @@ public class ArticleDao {
         cn = DbObject.getConnection();
 
         try {
-            String sql = "insert into article(articleName,userName,articleTypeName,articleContent) values(?,?,?,?)";
+            String sql = "insert into article(articleName,userName,articleTypeName,articleContent,articleCreateDate) values(?,?,?,?,?)";
             st = cn.prepareStatement(sql);
 
             st.setString(1, article.getArticleName());
             st.setString(2, article.getUserName());
             st.setString(3, article.getArticleTypeName());
             st.setString(4, article.getArticleContent());
+            st.setString(5, article.getArticleCreateDate());
 
 
             int ret = st.executeUpdate();
@@ -64,6 +65,8 @@ public class ArticleDao {
                 article.setArticleTypeName(rs.getString("articleTypeName"));
                 article.setArticleContent(rs.getString("articleContent"));
                 article.setUserName(rs.getString("userName"));
+                article.setArticleCreateDate(rs.getString("articleCreateDate"));
+                article.setArticleModifyDate(rs.getString("articleModifyDate"));
 
                 articleList.add(article);
             }
@@ -104,6 +107,8 @@ public class ArticleDao {
                 article.setArticleTypeName(rs.getString("articleTypeName"));
                 article.setArticleContent(rs.getString("articleContent"));
                 article.setUserName(rs.getString("userName"));
+                article.setArticleCreateDate(rs.getString("articleCreateDate"));
+                article.setArticleModifyDate(rs.getString("articleModifyDate"));
 
                 return article;
             } else {
@@ -147,6 +152,8 @@ public class ArticleDao {
                 article.setArticleTypeName(rs.getString("articleTypeName"));
                 article.setArticleContent(rs.getString("articleContent"));
                 article.setUserName(rs.getString("userName"));
+                article.setArticleCreateDate(rs.getString("articleCreateDate"));
+                article.setArticleModifyDate(rs.getString("articleModifyDate"));
 
                 articleList.add(article);
             }
@@ -183,6 +190,8 @@ public class ArticleDao {
                 article.setArticleName(rs.getString("articleName"));
                 article.setArticleTypeName(rs.getString("articleTypeName"));
                 article.setArticleContent(rs.getString("articleContent"));
+                article.setArticleCreateDate(rs.getString("articleCreateDate"));
+                article.setArticleModifyDate(rs.getString("articleModifyDate"));
                 article.setUserName(rs.getString("userName"));
 
                 return article;
@@ -232,13 +241,14 @@ public class ArticleDao {
 
         try {
 //            String sql = "insert into article(articleName,userName,articleTypeName,articleContent) values(?,?,?,?)";
-            String sql = "update article set articleName=?,articleTypeName=?,articleContent=? where articleId=?";
+            String sql = "update article set articleName=?,articleTypeName=?,articleContent=?,articleModifyDate=? where articleId=?";
             st = cn.prepareStatement(sql);
 
             st.setString(1, article.getArticleName());
             st.setString(2, article.getArticleTypeName());
             st.setString(3, article.getArticleContent());
-            st.setString(4, String.valueOf(article.getArticleId()));
+            st.setString(4, String.valueOf(article.getArticleModifyDate()));
+            st.setString(5, String.valueOf(article.getArticleId()));
 
             System.out.println(st);
             int ret = st.executeUpdate();
@@ -280,6 +290,8 @@ public class ArticleDao {
                 article.setArticleTypeName(rs.getString("articleTypeName"));
                 article.setArticleContent(rs.getString("articleContent"));
                 article.setUserName(rs.getString("userName"));
+                article.setArticleCreateDate(rs.getString("articleCreateDate"));
+                article.setArticleModifyDate(rs.getString("articleModifyDate"));
 
                 articleList.add(article);
             }
@@ -323,6 +335,8 @@ public class ArticleDao {
                 article.setArticleTypeName(rs.getString("articleTypeName"));
                 article.setArticleContent(rs.getString("articleContent"));
                 article.setUserName(rs.getString("userName"));
+                article.setArticleCreateDate(rs.getString("articleCreateDate"));
+                article.setArticleModifyDate(rs.getString("articleModifyDate"));
 
                 articleList.add(article);
             }

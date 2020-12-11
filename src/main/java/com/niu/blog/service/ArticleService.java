@@ -10,11 +10,9 @@ public class ArticleService {
     public Article addArticle(Article article) {
         ArticleDao articleDao = new ArticleDao();
 
-        Article newArticle = articleDao.addArticle(article);
-
         //记录日志等。。。。。。
 
-        return newArticle;
+        return articleDao.addArticle(article);
     }
 
     public List<Article> findAll() {
