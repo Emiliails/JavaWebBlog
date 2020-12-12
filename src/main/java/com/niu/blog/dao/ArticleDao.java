@@ -53,7 +53,7 @@ public class ArticleDao {
 
         try {
             //4.执行sql
-            String sql = "select * from article";
+            String sql = "select * from article order by articleCreateDate desc";
             st = cn.prepareStatement(sql);
 
             rs = st.executeQuery();

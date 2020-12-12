@@ -30,7 +30,7 @@
     <%--<%--%>
     <%--    List<Article> articleList = (List<Article>) request.getAttribute("articleList");--%>
     <%--%>--%>
-    <h1>所有文章</h1>
+    <h1>最近发表的所有文章</h1>
     <table class="table table-hover">
         <thead>
         <tr>
@@ -38,6 +38,7 @@
             <th>文章号</th>
             <th>文章名</th>
             <th>文章类型</th>
+            <th>创建时间</th>
             <th>查看文章</th>
 <%--            <th>评论文章</th>--%>
 <%--            <th>修改文章</th>--%>
@@ -51,6 +52,7 @@
                 <td>${article.articleId}</td>
                 <td>${article.articleName}</td>
                 <td>${article.articleTypeName}</td>
+                <td>${article.articleCreateDate}</td>
                 <td><a href="displayArticle?articleId=${article.articleId}">查看</a></td>
 <%--                <td></td>--%>
 <%--                <td><a href="modifyArticle?articleId=${article.articleId}">修改</a></td>--%>

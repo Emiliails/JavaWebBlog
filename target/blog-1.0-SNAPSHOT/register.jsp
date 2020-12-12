@@ -84,6 +84,11 @@
             <input type="text" class="form-control" id="description" name="description" value="${user.description}">
         </div>
         <div class="form-group">
+            <label for="registrationDate">注册日期</label>
+            <input type="text" class="form-control" id="registrationDate" name="registrationDate"
+                   value="<%=java.time.LocalDate.now()%>" readonly>
+        </div>
+        <div class="form-group">
             <label for="role">角色</label>
             <input type="text" class="form-control" id="role" name="role" value="用户" readonly>
         </div>
