@@ -1,17 +1,11 @@
 package com.niu.blog.filter;
 
-import java.io.IOException;
-
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 
 /**
  * Servlet Filter implementation class LoginFilter
@@ -44,7 +38,11 @@ public class LoginFilter implements Filter {
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         String url = httpRequest.getServletPath();
 
-        if (!url.equals("/login") && !url.equals("/register") && !url.equals("/manageArticle") && !url.equals("/searchArticle") && !url.equals("/searchUser")) {
+        if (!url.equals("/login") && !url.equals("/register") &&
+                !url.equals("/manageArticle") && !url.equals("/searchArticle") &&
+                !url.equals("/searchUser") && !url.equals("/displayArticle") &&
+                !url.equals("/displayArticleType") && !url.equals("/manageArticleByUser") &&
+                !url.equals("/manageArticleByUserNameAndArticleType")) {
             HttpSession session = httpRequest.getSession();
             String userName = (String) session.getAttribute("UserName");
             if (userName == null || userName.equals("")) {
@@ -59,7 +57,7 @@ public class LoginFilter implements Filter {
     /**
      * @see Filter#init(FilterConfig)
      */
-    public void init(FilterConfig fConfig) throws ServletException {
+    public void init(FilterConfig fConfig) {
         // TODO Auto-generated method stub
     }
 
