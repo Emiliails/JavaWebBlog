@@ -28,26 +28,6 @@
 <div class="container">
     <%@include file="layout/header.jsp" %>
     <h1>查看文章</h1>
-    <%--    <table class="table table-hover">--%>
-    <%--        <thead>--%>
-    <%--        <tr>--%>
-    <%--            <th>用户名</th>--%>
-    <%--            <th>文章号</th>--%>
-    <%--            <th>文章名</th>--%>
-    <%--            <th>文章类型</th>--%>
-    <%--            <th>文章内容</th>--%>
-    <%--        </tr>--%>
-    <%--        </thead>--%>
-    <%--        <tbody>--%>
-    <%--        <tr>--%>
-    <%--            <td>${article.userName}</td>--%>
-    <%--            <td>${article.articleId}</td>--%>
-    <%--            <td>${article.articleName}</td>--%>
-    <%--            <td>${article.articleTypeName}</td>--%>
-    <%--            <td><p class="text-justify">${article.articleContent}</p></td>--%>
-    <%--        </tr>--%>
-    <%--        </tbody>--%>
-    <%--    </table>--%>
 
     <table class="table">
         <tbody>
@@ -75,11 +55,40 @@
             <th>修改日期</th>
             <td>${article.articleModifyDate}</td>
         </tr>
+        <tr>
+            <th>文章内容</th>
+            <td>${article.articleContent}</td>
+        </tr>
+        <tr>
+            <th>评论文章</th>
+            <td>
+                <form action="displayArticle" method="post">
+                    <div class="form-group">
+                        <label for="commenterUserName">评论者</label>
+                        <input type="text" class="form-control" id="commenterUserName" name="commenterUserName"
+                               value=${commenterUserName} readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="articleId">文章号</label>
+                        <input type="text" class="form-control" id="articleId" name="articleId"
+                               value=${article.articleId} readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="commentContent">评论内容</label>
+                        <textarea class="form-control" id="commentContent" name="commentContent" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">评论</button>
+                </form>
+            </td>
+        </tr>
+        <c:forEach items="${commentList}" var="comment">
+            <tr>
+                <th>${comment.commenterUserName}的评论</th>
+                <td>${comment.commentContent}</td>
+            </tr>
+        </c:forEach>
         </tbody>
     </table>
-    <div>
-        ${article.articleContent}
-    </div>
     <%@include file="layout/footer.jsp" %>
 </div>
 </body>

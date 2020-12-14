@@ -9,87 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa490c04-4eb3-49f2-a78a-231705b89bf2" name="Default Changelist" comment="修复了访客无法查看文章的问题">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/1a72c057-30fc-452f-bd44-7c2c57efe511.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/dao/ArticleDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/dao/ArticleTypeDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/entity/Article.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/entity/ArticleType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/service/ArticleService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/service/ArticleTypeService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/AddArticle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/AddArticleType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/AddUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/DeleteArticle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/DeleteArticleType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/DisplayArticle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/DisplayArticleType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/DisplayCurrentArticleType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/DisplayCurrentUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/ManageArticle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/ManageArticleByUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/ManageArticleByUserNameAndArticleType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/ManageCurrentArticle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/ModifyArticle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/ModifyArticleType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/ModifyCurrentUserInformation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/ModifyCurrentUserPassword.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/ModifyUserStatus.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/SearchArticle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/SearchUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/addArticle.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/addArticleType.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/addUser.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/deleteArticleType.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/displayArticle.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/displayArticleType.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/img/ben-wicks-128bVLkKo7o-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/img/jan-weber-mXZdMS2fDdE-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/img/susan-yin-ImoVrhUBeFs-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/manageArticle.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/manageCurrentArticle.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/modifyArticle.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/modifyArticleType.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/modifyCurrentUserInformation.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/modifyCurrentUserPassword.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/searchArticle.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/searchUser.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/dao/ArticleDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/dao/ArticleTypeDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/entity/Article.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/entity/ArticleType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/service/ArticleService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/service/ArticleTypeService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/AddArticle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/AddArticleType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/AddUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/DeleteArticle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/DeleteArticleType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/DisplayArticle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/DisplayArticleType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/DisplayCurrentArticleType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/DisplayCurrentUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/ManageArticle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/ManageArticleByUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/ManageArticleByUserNameAndArticleType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/ManageCurrentArticle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/ModifyArticle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/ModifyArticleType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/ModifyCurrentUserInformation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/ModifyCurrentUserPassword.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/ModifyUserStatus.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/SearchArticle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/SearchUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/ben-wicks-128bVLkKo7o-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/jan-weber-mXZdMS2fDdE-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/susan-yin-ImoVrhUBeFs-unsplash.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="aa490c04-4eb3-49f2-a78a-231705b89bf2" name="Default Changelist" comment="增加文章评论功能">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/CommentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/entity/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1a72c057-30fc-452f-bd44-7c2c57efe511.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1a72c057-30fc-452f-bd44-7c2c57efe511.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/filter/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/filter/LoginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/DisplayArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/DisplayArticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/displayArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/displayArticle.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/filter/LoginFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/filter/LoginFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/DisplayArticle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/DisplayArticle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/displayArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/displayArticle.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/niu/blog/filter/LoginFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/filter/LoginFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/DisplayArticle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/DisplayArticle.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,6 +81,17 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 9.0.40" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.40" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="blog:war exploded">
@@ -259,7 +202,8 @@
       <workItem from="1607563733921" duration="167000" />
       <workItem from="1607589538724" duration="10813000" />
       <workItem from="1607685084857" duration="12641000" />
-      <workItem from="1607819079441" duration="1030000" />
+      <workItem from="1607819079441" duration="1139000" />
+      <workItem from="1607846720197" duration="9229000" />
     </task>
     <task id="LOCAL-00001" summary="添加了用户字段，相应地更改了用户注册部分">
       <created>1606988931155</created>
@@ -478,14 +422,20 @@
       <option name="project" value="LOCAL" />
       <updated>1607735259986</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="修复了访客无法查看文章的问题">
+      <created>1607820173913</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1607820173913</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="增加了添加文章的功能" />
     <MESSAGE value="增加了查看文章的功能" />
     <MESSAGE value="修改了主界面" />
     <MESSAGE value="添加图片文件" />
@@ -510,7 +460,10 @@
     <MESSAGE value="增加了文章创建时间和修改时间&#10;修复了用户注册时间为空的bug" />
     <MESSAGE value="查看所有文章按创建时间倒序排列" />
     <MESSAGE value="修复了访客无法查看文章的问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复了访客无法查看文章的问题" />
+    <MESSAGE value="增加文章评论功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加文章评论功能" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
