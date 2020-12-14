@@ -9,30 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa490c04-4eb3-49f2-a78a-231705b89bf2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/ReplyDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/entity/Reply.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/ReplyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/ManageReply.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/ReplyComment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/manageReply.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/replyComment.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1a72c057-30fc-452f-bd44-7c2c57efe511.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1a72c057-30fc-452f-bd44-7c2c57efe511.xml" afterDir="false" />
+    <list default="true" id="aa490c04-4eb3-49f2-a78a-231705b89bf2" name="Default Changelist" comment="增加回复评论功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/ArticleTypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/ArticleTypeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/CommentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/dao/CommentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/entity/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/filter/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/filter/LoginFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/ArticleTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/service/ArticleTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/DisplayArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/DisplayArticle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/displayArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/displayArticle.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/dao/ArticleTypeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/dao/ArticleTypeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/service/ArticleTypeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/service/ArticleTypeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/displayArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/displayArticle.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/layout/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/layout/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/niu/blog/dao/ArticleTypeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/dao/ArticleTypeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/niu/blog/service/ArticleTypeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/service/ArticleTypeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/ReplyComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niu/blog/servlet/ReplyComment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/filter/LoginFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/filter/LoginFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/DisplayArticle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog-1.0-SNAPSHOT/WEB-INF/classes/com/niu/blog/servlet/DisplayArticle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niu/blog/filter/LoginFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/filter/LoginFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/DeleteArticle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/DeleteArticle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/DisplayArticle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niu/blog/servlet/DisplayArticle.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +44,9 @@
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1l7wvnoJOqTcVhmm5r27IuXKpoW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -220,7 +207,7 @@
       <workItem from="1607685084857" duration="12641000" />
       <workItem from="1607819079441" duration="1139000" />
       <workItem from="1607846720197" duration="13286000" />
-      <workItem from="1607927303209" duration="7468000" />
+      <workItem from="1607927303209" duration="8793000" />
     </task>
     <task id="LOCAL-00001" summary="添加了用户字段，相应地更改了用户注册部分">
       <created>1606988931155</created>
@@ -453,14 +440,20 @@
       <option name="project" value="LOCAL" />
       <updated>1607911200940</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="增加回复评论功能">
+      <created>1607937250086</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1607937250087</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="增加了查看文章的功能" />
     <MESSAGE value="修改了主界面" />
     <MESSAGE value="添加图片文件" />
     <MESSAGE value="引入了JSTL" />
@@ -485,7 +478,8 @@
     <MESSAGE value="查看所有文章按创建时间倒序排列" />
     <MESSAGE value="修复了访客无法查看文章的问题" />
     <MESSAGE value="增加文章评论功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加文章评论功能" />
+    <MESSAGE value="增加回复评论功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加回复评论功能" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

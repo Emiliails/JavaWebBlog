@@ -38,5 +38,7 @@ public class ReplyComment extends HttpServlet {
         ReplyService replyService = new ReplyService();
         replyService.addReply(reply);
 
+        response.sendRedirect("manageReply?commentId=" + commentId);
+
     }
 }
