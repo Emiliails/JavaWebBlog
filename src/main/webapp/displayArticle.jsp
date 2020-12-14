@@ -83,8 +83,10 @@
         </tr>
         <c:forEach items="${commentList}" var="comment">
             <tr>
-                <th>${comment.commenterUserName}的评论</th>
+                <th>${comment.commenterUserName}的评论(评论号${comment.commentId})</th>
                 <td>${comment.commentContent}</td>
+                <td><a href="manageReply?commentId=${comment.commentId}">查看回复</a></td>
+                <td><a href="replyComment?commentId=${comment.commentId}">回复评论</a></td>
             </tr>
         </c:forEach>
         </tbody>

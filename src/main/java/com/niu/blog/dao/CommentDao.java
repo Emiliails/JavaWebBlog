@@ -46,7 +46,6 @@ public class CommentDao {
         cn = DbObject.getConnection();
         if (cn == null)
             return null;
-        //用户的信息至少包括，用户的登录名、密码、用户的姓名、性别、出生日期、手机、Email、微信号、描述信息、注册日期等。
         try {
             //4.执行sql
             String sql = "select * from comment where articleId=?";
@@ -62,6 +61,7 @@ public class CommentDao {
                 comment.setArticleId(rs.getInt("articleId"));
                 comment.setCommenterUserName(rs.getString("commenterUserName"));
                 comment.setCommentContent(rs.getString("commentContent"));
+                comment.setCommentId(rs.getInt("commentId"));
                 commentList.add(comment);
             }
         } catch (SQLException e) {

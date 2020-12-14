@@ -38,7 +38,7 @@ public class ArticleTypeService {
 
     public List<ArticleType> findByUserName(String userName) {
         ArticleTypeDao articleTypeDao = new ArticleTypeDao();
-        return ArticleTypeDao.findByUserName(userName);
+        return articleTypeDao.findByUserName(userName);
     }
 
     public ArticleType updateArticleType(String articleName,ArticleType articleType) {

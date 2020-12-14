@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ArticleTypeDao {
-    public static List<ArticleType> findByUserName(String userName) {
+    public List<ArticleType> findByUserName(String userName) {
         ArrayList<ArticleType> articleTypeList = new ArrayList<>();
         Connection cn = null;
         PreparedStatement st = null;

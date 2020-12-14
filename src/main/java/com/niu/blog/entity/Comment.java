@@ -1,9 +1,10 @@
 package com.niu.blog.entity;
 
 public class Comment {
-    String commenterUserName;
-    String commentContent;
-    int articleId;
+    private int commentId;
+    private String commenterUserName;
+    private String commentContent;
+    private int articleId;
 
     public Comment() {
     }
@@ -30,5 +31,13 @@ public class Comment {
 
     public void setArticleId(int articleId) {
         this.articleId = articleId;
+    }
+
+    public int getCommentId() {
+        return commentId;
+    }
+
+    public void setCommentId(int commentId) {
+        this.commentId = commentId;
     }
 }

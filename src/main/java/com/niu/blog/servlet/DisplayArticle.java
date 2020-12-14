@@ -36,6 +36,7 @@ public class DisplayArticle extends HttpServlet {
         List<Comment> commentList = new CommentService().findByArticleId(articleId);
         request.setAttribute("commentList", commentList);
 
+
         request.getRequestDispatcher("/displayArticle.jsp").forward(request, response);
     }
 
